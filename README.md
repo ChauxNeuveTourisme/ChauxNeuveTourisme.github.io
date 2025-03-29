@@ -1,1 +1,1 @@
-# ChauxNeuveTourismegithub.io
+# Chaux-neuve
