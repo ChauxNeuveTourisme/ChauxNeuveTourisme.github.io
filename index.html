@@ -160,35 +160,55 @@
     </style>
     <script>
         function initMaps() {
-            // Check if Google Maps API is loaded
             if (typeof google === "undefined") {
                 console.error("Google Maps API failed to load.");
                 return;
             }
-
-            // Map options
+    
             const options = { zoom: 12, center: { lat: 46.6810107, lng: 6.1329424 } };
-
-            // Create Maps
             const commerceMap = new google.maps.Map(document.getElementById("commerceMap"), options);
             const restaurantMap = new google.maps.Map(document.getElementById("restaurantMap"), options);
             const touristMap = new google.maps.Map(document.getElementById("touristMap"), options);
-
-            // Locations and markers
+    
+            let openInfoWindow = null;
+    
             const locations = [
-                { map: commerceMap, places: [
-                    { name: 'Boulangerie l’épicurien', position: { lat: 46.7500, lng: 6.2500 }, url: '' },
-                    { name: 'Supermarché Bi1', position: { lat: 46.7500, lng: 6.2500 }, url: '' }
-                ]},
-                { map: restaurantMap, places: [
-                    { name: 'La table du cebriot', position: { lat: 46.8000, lng: 6.3000 }, url: 'https://latableducebriot.metro.rest/?lang=fr' }
-                ]},
-                { map: touristMap, places: [
-                    { name: "L'ecomusée maison michaud", position: { lat: 46.7500, lng: 6.2500 }, url: 'http://ecomusee-jura.fr/' }
-                ]}
-            ];
+                { 
+                    map: commerceMap, 
+                    places: [
+                        { name: 'L’Epicurien Mouthe', position: { lat: 46.71016953554457,  lng: 6.192014233234653 }, url: '', info: 'Boulangerie et pâtisserie artisanale à Mouthe.' },
+                        { name: 'Supermarché Bi1', position: { lat: 46.71459355287863, lng: 6.195814911089444 }, url: '', info: 'Supermarché proposant divers produits locaux et bio.' },
+                        { name: 'Boulangerie Henry la bel Foncine', position: { lat: 46.65833095536826,  lng: 6.071198668758929 }, url: '', info: 'Foncine le Haut 6 km de Chaux-Neuve' },
+                        { name: 'Maximarché Foncine le Haut', position: { lat: 46.65721592077924, lng: 6.073019826430813, }, url: 'https://magasins.maximarche.fr/maximarche/fr/store/12421?utm_source=GMB&utm_campaign=Multidiffusion&utm_medium=local&utm_content=12421&origin=GMB', info: 'Foncine le Haut 6 km de Chaux-Neuve' },
+                        { name: 'Fruitières des rebelles ', position: { lat: 46.65848205396934, lng: 6.071089393891327, }, url: 'https://www.fromagerie-foncine.fr/', info: 'fromagerie fabriquant le comté AOP.' },
+                        { name: 'Maison de santé du Val de Mouthe', position: { lat: 46.71204233763361, lng: 6.192299811089344, }, url: 'http://www.femasac.fr/membres/doubs/mouthe.html', info: 'Mouthe 7 km de Chaux neuve.' },
+                        { name: 'Pharmacie de la source ', position: { lat: 46.71093382752005, lng: 6.192601965559464, }, url: 'http://pharmacie-delasource.com', info: 'Mouthe 7 km de Chaux neuve.' }
+                    ]
+                },
+                { 
+                    map: restaurantMap, 
+                    places: [
+                        { name: 'La table du cebriot', position: { lat: 46.679448537169385,  lng: 6.132867832840808 }, url: 'https://latableducebriot.metro.rest/?lang=fr', info: 'Restaurant gastronomique avec des spécialités régionales.' },
+                        { name: 'Auberge Les Enguenelles', position: { lat: 46.653180897249996, lng: 6.108502313970737,}, url: 'https://aubergelesenguenelles.com/', info: 'Restaurant gastronomique avec des spécialités régionales.' },
+                        { name: 'Le chalet de la source', position: { lat: 46.70699292711315, lng: 6.208829384104942, }, url: 'https://www.lechaletdelasource.fr/', info: 'Restaurant gastronomique avec des spécialités régionales.' },
+                        { name: 'Chez liadet', position: { lat: 46.68109585911324, lng: 6.186338366908132 }, url: 'https://www.chezliadet.com/', info: 'Restaurant gastronomique avec des spécialités régionales.' }
+                    ]
+                },
+                { 
+                    map: touristMap, 
+                    places: [
+                        { name: "L'ecomusée maison michaud", position: { lat: 46.6295987590241, lng: 6.140725739921676 }, url: 'http://ecomusee-jura.fr/', info: 'Découvrez l’histoire et le patrimoine du Jura.' },
+                        { name: "Le parc polaire", position: { lat: 46.65286318793734, lng: 6.144102837486194, }, url: 'https://www.parcpolaire.com', info: 'Découvrez ........' },
+                        { name: "Les équipages Adam’s", position: { lat: 46.634008313998734, lng: 6.139203597593849 }, url: 'http://www.lesequipagesadams.com/', info: 'Découvrez ........' },
+                        { name: "Maison de la réserve", position: { lat: 46.76879320102146, lng: 6.276256958975293}, url: 'http://www.maisondelareserve.fr/', info: 'Découvrez ........' },
+                        { name: "Le Rucher des 2 Lacs", position: { lat: 446.789324659010745, lng: 6.274133842652708 }, url: 'http://lerucherdes2lacs.fr/', info: 'Découvrez ........' },
+                        { name: "Fonderie de Cloches Obertino", position: { lat: 46.77133530386648, lng: 6.279714872447111 }, url: 'https://fonderieobertino.jimdo.com/', info: 'Découvrez ........' },
+                        { name: "Fruitière des lacs", position: { lat: 46.7815635625925, lng: 6.2818190994521474 }, url: 'https://lafruitieredeslacs-comte-morbier.com/', info: 'Découvrez ........' },
 
-            // Add markers
+                    ]
+                }
+            ];
+    
             locations.forEach(category => {
                 category.places.forEach(place => {
                     const marker = new google.maps.Marker({
@@ -196,15 +216,73 @@
                         map: category.map,
                         title: place.name
                     });
-
-                    // Open URL on marker click
-                    if (place.url) {
-                        marker.addListener("click", () => window.open(place.url, "_blank"));
-                    }
+    
+                    // Styled Info Window content
+                    const contentString = `
+                        <div class="info-window">
+                            <h3>${place.name}</h3>
+                            <p>${place.info}</p>
+                            ${place.url ? `<button class="info-button" onclick="window.open('${place.url}', '_blank')">🔗 Plus d'infos</button>` : ""}
+                        </div>
+                    `;
+    
+                    const infoWindow = new google.maps.InfoWindow({ content: contentString });
+    
+                    marker.addListener("click", () => {
+                        if (openInfoWindow) {
+                            openInfoWindow.close();
+                        }
+                        infoWindow.open(category.map, marker);
+                        openInfoWindow = infoWindow;
+                    });
+    
+                    category.map.addListener("click", () => {
+                        infoWindow.close();
+                        openInfoWindow = null;
+                    });
                 });
             });
         }
     </script>
+    <style>
+        .info-window {
+    font-family: Arial, sans-serif;
+    max-width: 300px;
+    padding: 10px;
+    text-align: center;
+}
+
+.info-window h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.info-window p {
+    font-size: 14px;
+    color: #666;
+}
+
+.info-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #001c33;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.info-button:hover {
+    background-color: #0056b3;
+}
+
+    </style>    
+    
+    
     <script defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSy0u_2PnSW5DLb4NLoiGhLu78Tb-foEk&callback=initMaps"></script>
 
@@ -308,21 +386,18 @@
                                                                     <div class="separator"></div>
                                                                 </div>
                                                                 <p
-                                                                    style="font-size: 1.5rem !important;color: white !important;">
-                                                                    Chaux neuve est un petit village de 300 âmes situé
-                                                                    dans le département du Doubs,
-                                                                    c’est un village réputé pour son tremplin de saut à
-                                                                    ski ou des coupes du mondes
-                                                                    de combiné nordique (un sport mêlant saut à ski et
-                                                                    ski de fond) sont organisées.
-                                                                    Nous pouvons aussi pratiquer des sports de pleines
-                                                                    natures tel que le ski de fond,
-                                                                    la course à pied, le vélo et des randonnées, parce
-                                                                    que Chaux-Neuve est un vrai terrain de jeux pour les
-                                                                    sportifs. </p>
+                                                                    style="font-size: 1.5rem !important;color: white !important; text-align: justify !important;">
+                                                                    Chaux neuve est un petit village de 300 âmes situé dans le
+                                                                    département du Doubs, c’est un village réputé pour son tremplin
+                                                                    de saut à ski ou des coupes du monde de combiné nordique (un
+                                                                    sport mêlant saut à ski et ski de fond) sont organisées.
+                                                                    Il est possible d’y pratiquer de nombreux sports de pleine nature
+                                                                    tels que le ski de fond, la course à pied, le vélo et les randonnées,
+                                                                    parce que Chaux-Neuve est un vrai terrain de jeux pour les
+                                                                    sportifs.</p>
                                                             </div>
                                                         </div>
-                                                        <div class="col-sm-12 col-xs-12" style="text-align: center !important;;">
+                                                        <div class="col-sm-12 col-xs-12" style="text-align: end !important;;">
                                                             <img src="assets/Franche-Comte.svg" alt="" width="300px">
                                                         </div>
                                                     </div>
@@ -349,10 +424,12 @@
                                         <div class="separator"></div>
                                     </div>
                                     <div class="single_features_text">
-                                        <p style="font-size: 1.5rem !important;">Les tremplins de chaux Neuve sont 4
+                                        <p style="font-size: 1.5rem !important; text-align: justify !important;">Les tremplins de chaux Neuve sont 4
                                             tremplins de 10 à 120 m ou des sauteurs à ski s’élancent.
                                             Leurs sauts vous impressionneront et vous donneront le vertige à coup sûr!.
                                             La féerie des paysages ouatés de blanc de Chaux-Neuve l’hiver.
+                                            Dégustation de spécialités culinaires de Franche-Comté telles que le Comté,
+                                            Le mont d’or et la saucisse de Morteau
                                         </p>
                                     </div>
                                 </div>
@@ -391,7 +468,7 @@
                         </h3>
                     </div>
                     <div class="single_features_text" style="display: block !important; text-align: center !important;">
-                        <p style="font-size: 1.5rem !important;color: white !important;">Dégustation de spécialité
+                        <p style="font-size: 1.5rem !important;color: white !important; text-align: justify !important;">Dégustation de spécialité
                             culinaire de Franche-Comté tel que le Comté,
                             Le mont d’or et la saucisse de Morteau </p>
                     </div>
@@ -433,7 +510,7 @@
                 <div class="col-sm-12 col-xs-12">
                     <div class="main_features_area">
                         <div class="head_title">
-                            <h3 style="text-align: center !important;">Les animaux de Franche-Comté</h3>
+                            <h3 style="text-align: center !important;">La faune sauvage de Franche-Comté</h3>
                         </div>
                         <div class="row" style="margin-right: 0px !important;margin-left: 0px !important;">
                             <div class="main_features_content">
@@ -449,6 +526,15 @@
                                             <img class="image" src="assets/images/tetras-01-1.jpg" alt="" />
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="single_features_text">
+                                    <p style="font-size: 1.5rem !important; text-align: justify !important;">
+                                        En Franche-Comté, on trouve une riche biodiversité incluant des espèces emblématiques comme le loup, le lynx et le tétras.<br>
+                                        Actuellement, le loup revient progressivement dans les forêts de Franche-Comté. Sa présence est souvent sujet au débat et aux conflits car celui-ci doit cohabiter avec les activités humaines et l’élevage.<br>
+                                        Le lynx, félin discret, est également présent dans les forêts de la région. Le lynx est un prédateur important pour l’écosystème, régulant les populations de gibier.<br> Sa réintroduction a été un succès dans certaines zones, et il est souvent observé lors de randonnées.<br>
+                                        Le grand tétras est un oiseau emblématique des forêts montagnardes, est également présent. Il est connu pour ses parades nuptiales impressionnantes et son chant caractéristique.<br> La préservation de son habitat naturel est essentielle pour sa survie.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -472,7 +558,7 @@
                                     <div class="col-sm-12 col-xs-12">
                                         <div class="head_title">
                                             <h3 style="color: white !important; text-align: center !important;">En quelques mots le
-                                                pré-Poncet c’est quoi</h3>
+                                                pré-Poncet c’est quoi ?</h3>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-xs-12">
@@ -491,19 +577,19 @@
                                         <div class="separator-border-top"></div>
                                     </div>
                                     <div class="single_features_text">
-                                        <p style="font-size: 1.5rem !important;color: white !important; text-align: center !important;">
-                                            Bienvenue sur les mythiques pistes de ski de fond des Montagnes du Jura !
-                                            Depuis le départ des pistes du Pré Poncet les possibilités d'itinéraires ski
-                                            de fond sont grandes…
-                                            Le passage de l'itinéraire de la Grande Traversée du Jura permettra même aux
-                                            plus sportifs de rejoindre des villages plus lointains comme Foncine le Haut
-                                            ou même Bellefontaine.
-                                            Les non skieurs y trouveront également leur compte, grâce aux nombreuses
-                                            pistes de raquettes à neige balisées, aux mushers qui les emmèneront pour
-                                            une balade en traîneaux à travers la Combe des Cives ou tout simplement sur
-                                            les pistes piétons qui permettent l'accès à une piste damée et sécurisée.
-                                            Le petit village de Chaux Neuve est aussi réputé pour son tremplin de saut à
-                                            ski.
+                                        <p style="font-size: 1.5rem !important;color: white !important; text-align: justify !important;">
+                                            Bienvenue sur les mythiques pistes de ski de fond des Montagnes du
+                                            Jura ! Depuis le départ des pistes du Pré Poncet les possibilités
+                                            d'itinéraires ski de fond sont grandes… Le passage de la Grande
+                                            Traversée du Jura permettra même aux plus sportifs de rejoindre
+                                            des villages plus lointains comme Foncine le Haut ou même
+                                            Bellefontaine. Les non skieurs y trouveront également leur
+                                            compte, grâce aux nombreuses pistes de raquettes à neige
+                                            balisées, aux mushers qui les emmèneront pour une balade en
+                                            traîneaux à chiens à travers la Combe des Cives, ou tout
+                                            simplement sur les pistes piétons qui permettent l'accès à une
+                                            piste damée et sécurisée. Le petit village de Chaux Neuve est
+                                            aussi réputé pour son tremplin de saut à ski.
                                         </p>
                                     </div>
                                     <div class="separator-border-bottom"></div>
@@ -586,7 +672,7 @@
                         <div class="col-sm-6 col-xs-12">
                             <div class="single_features_text type">
 
-                                <p style="font-size: 1.5rem !important;color: white !important;"> <span
+                                <p style="font-size: 1.5rem !important;color: white !important; text-align: justify !important;"> <span
                                         style="font-size: 1.5rem !important;" class="white">●</span> Il y a des pistes
                                     pour tous les niveaux et tout le monde y trouvera son compte, que ce soit le niveau
                                     débutant,
@@ -602,7 +688,7 @@
                         </div>
                         <div class="col-sm-6 col-xs-12">
                             <div class="single_features_text1 type">
-                                <p style="font-size: 1.5rem !important;color: white !important;">Vous découvrirez des
+                                <p style="font-size: 1.5rem !important;color: white !important; text-align: justify !important;">Vous découvrirez des
                                     infos complémentaires sur le domaine skiable du Pré-Poncet tel que le bulletin
                                     neige,
                                     la webcam sur le site l’espace nordique jurassien. </p>
@@ -623,53 +709,66 @@
             <div class="row padding-con-left" style="margin-right: 0px !important;margin-left: 0px !important;">
                 <div class="col-sm-12 col-xs-12">
                     <div class="head_title">
-                        <h3 style="color: white !important; text-align: center !important;">Quelques idées de randonnées
+                        <h3 style="text-align: center !important;">Quelques idées de randonnées
                             à proximité de Chaux-Neuve</h3>
                     </div>
                     <div class="main_features_area">
                         <div class="row" style="margin-right: 0px !important;margin-left: 0px !important;">
-                            <div class="main_features_content">
-                                <div class="col-sm-12 col-xs-12">
-                                    <div class="single_features_text"
-                                        style="display: block !important; text-align: center !important;">
-                                        <p style="font-size: 1.5rem !important;">Vous pourrez
-                                            aussi vous rendre à la roche de Châtelblanc ou vous pourrez observer un
-                                            magnifique panorama sur le village de Chaux-Neuve et de chatelblanc et vous
-                                            pourrez aussi admirer les beaux sommet du Doubs comme par exemple le Mont
-                                            d’Or. </p>
-                                    </div>
+                            <div class="col-sm-12 col-xs-12">
+                                <div class="head_title">
+                                    <h4>Le lac de Remoray et le lac Saint Point</h4>
+                                    <div class="separator"></div>
                                 </div>
+                                <div class="single_features_text"
+                                    style="display: block !important; text-align: center !important;">
+                                    <p style="font-size: 1.5rem !important; text-align: justify !important;">
+                                        Le lac St Point est le plus grand lac naturel de Franche-Comté. C’est un lieu entouré de forêt et de colline, offrant un cadre idyllique.
+                                        Le lac est parfait pour diverses activités de plein air car c’est le paradis pour les amateurs de sports nautiques, de pêche. En été, il attire de nombreux visiteurs qui viennent profiter de ces plages et de ces paysages pittoresques. En hiver, la région est souvent recouverte de neige, ce qui crée une ambiance féérique.
+                                        C’est un lieu idéal pour les randonnées en famille car de nombreux sentiers serpentent autour du lac et les randonneurs les plus aguerris peuvent même en faire le tour.
+
+                                    </p>
+                                </div>
+                            </div>
                                 <div class="col-sm-12 col-xs-12">
-                                    <div class="separator-border-bottom"></div>
                                     <div class="row">
                                         <div class="col-sm-6 col-xs-12">
                                             <div class="features-img">
                                                 <img src="assets/images/6b105ebf-1c25-4fcd-be2c-645c3ef85a5b.jpeg"
                                                     alt="" class="image">
                                             </div>
-                                            <div class="features-content" style="text-align: center !important;">
-                                                <h3>?</h3>
-                                                <p>...............</p>
-                                            </div>
                                         </div>
                                         <div class="col-sm-6 col-xs-12">
                                             <div class="features-img">
-                                                <img src="assets/images/d34ed2a0-afca-4cee-9b36-4e536d820f1c.jpeg"
+                                                <img src="assets/images/lac-saint-point-ete-cvma-2-fv3wv1id0t55.jpg"
                                                     alt="" class="image">
-                                            </div>
-                                            <div class="features-content" style="text-align: center !important;">
-                                                <h3>?</h3>
-                                                <p>...............</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-xs-12">
+                                    <div class="separator-border"></div>
+                                        <div class="head_title">
+                                            <h4>La source du Doubs et les tourbières de Mouthe</h4>
+                                            <div class="separator"></div>
+                                        </div>
                                         <div class="single_features_text"
                                             style="display: block !important; text-align: center !important;">
-                                            <p style="font-size: 1.5rem !important;">Le sentier
+                                            <p style="font-size: 1.5rem !important; text-align: justify !important;">Le sentier
                                                 de la Source du Doubs est un petit chemin sympatique partant du village
                                                 de mouthe jusqu’à la Source du doubs, ce petit sentier est accessible en
-                                                course à pied, à vélo, en marchant.</p>
+                                                course à pied, à vélo, en marchant. 
+                                                Cette source est particulièrement connue pour la beauté
+                                                de ses paysages verdoyants ainsi que ses formations rocheuses.
+                                                La source du Doubs est une résurgence d’eau claire qui
+                                                jaillit des rochers, créant un petit ruisseau qui s’écoule
+                                                au travers de la vallée. En fonction des raison saisons et
+                                                de la météo pluvieuse ou non, le débit de la source peut
+                                                varier, ce qui ajoute un charme!
+                                                Les tourbières de Mouthe, situées dans le département du Doubs en France, sont des zones humides et riches en biodiversité.<br>
+                                                Ces tourbières sont essentielles pour la conservation des ressources en eau et jouent un rôle crucial dans la régulation du climat en stockant le carbone. <br>
+                                                Elle abrite une grande variété de plantes comme par exemple les orchidées, ainsi qu’une faune spécifique aux tourbières tels que des oiseaux migrateurs et insectes spécifiques.<br>
+                                                Les tourbières de Mouthe sont un lieu d’intérêt pour les chercheurs et les amoureux de la nature, offrant des sentiers de randonnée et des observatoires pour observer la faune et la flore.
+
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -679,30 +778,30 @@
                                                     <img src="assets/images/IMG_0188.jpeg"
                                                         alt="" class="image">
                                                 </div>
-                                                <div class="features-content" style="text-align: center !important;">
-                                                    <h3>?</h3>
-                                                    <p>...............</p>
-                                                </div>
                                             </div>
                                             <div class="col-sm-6 col-xs-12">
                                                 <div class="features-img">
                                                     <img src="assets/images/5f99611c-4c16-4cc3-978c-61b9e51e63e9[75].jpeg"
                                                         alt="" class="image">
                                                 </div>
-                                                <div class="features-content" style="text-align: center !important;">
-                                                    <h3>?</h3>
-                                                    <p>...............</p>
-                                                </div>
                                             </div>
                                         </div>
                                     <div class="col-sm-12 col-xs-12">
+                                        <div class="separator-border"></div>
+                                        <div class="head_title">
+                                            <h4>Le lac des Mortes (Chapelle-des-Bois)</h4>
+                                            <div class="separator"></div>
+                                        </div>
                                         <div class="single_features_text"
                                             style="display: block !important; text-align: center !important;">
-                                            <p style="font-size: 1.5rem !important;">Le lac des
+                                            <p style="font-size: 1.5rem !important; text-align: justify !important;">Le lac des
                                                 Mortes à Chapelle-des-bois marque la frontière entre le Doubs et le Jura
                                                 avec le lac de Bellefontaine. Des sentiers de randonnées pédestres et de
                                                 VTT permettent de découvrir ce magnifique lac entouré de belles
-                                                tourbières abritant une faune et une flore exceptionnelle. </p>
+                                                tourbières abritant une faune et une flore exceptionnelle.
+                                                Le lac des Mortes est un joli lac situé près de Chapelle-des-bois dans le Haut Doubs. C’est un endroit paisible, idéal pour la randonnée et la détente. Le lac est entouré de forêts et de collines, ce qui en fait un cadre naturel très agréable.
+                                                Les visiteurs peuvent pratiquer des activités comme la pêche, le kayak ou tout simplement profiter d’un pique-nique au bord de l’eau. En été, c’est le lieu idéal pour se rafraîchir, et en hiver, c’est le point de départ pour de belles rando en raquettes pour profiter des paysages enneigés autour du lac.
+                                                </p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -711,28 +810,26 @@
                                                 <img src="assets/images/chapelle-des-bois-6640-32_w800.webp"
                                                     alt="" class="image">
                                             </div>
-                                            <div class="features-content" style="text-align: center !important;">
-                                                <h3>?</h3>
-                                                <p>...............</p>
-                                            </div>
                                         </div>
                                         <div class="col-sm-6 col-xs-12">
                                             <div class="features-img">
                                                 <img src="assets/images/58cf6f73-5ee5-46f2-86cb-e6db71c744ce.jpeg"
                                                     alt="" class="image">
                                             </div>
-                                            <div class="features-content" style="text-align: center !important;">
-                                                <h3>?</h3>
-                                                <p>...............</p>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-xs-12">
+                                        <div class="separator-border"></div>
+                                        <div class="head_title">
+                                            <h4>La roche Champion (Chapelle-des-Bois)</h4>
+                                            <div class="separator"></div>
+                                        </div>
                                         <div class="single_features_text"
                                             style="display: block !important; text-align: center !important;">
-                                            <p style="font-size: 1.5rem !important;">Le beau
-                                                point de vue depuis la roche champion sur le village de Chapelle des
-                                                Bois et le lac des mortes </p>
+                                            <p style="font-size: 1.5rem !important; text-align: justify !important;">
+                                                La roche Champion offre des vues panoramiques sur la région qui l’entoure. C’est un site apprécié des randonneurs, car il propose des sentiers de randonnées qui permettent d’accéder à des paysages magnifiques tels que des forêts denses et de nombreux points de vue magnifiques.
+                                                La roche Champion est le lieu idéal pour observer et profiter de la tranquillité de la nature si tu aimes la randonnée !
+                                                </p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -741,27 +838,26 @@
                                                 <img src="assets/images/roche-champion.gif"
                                                     alt="" class="image">
                                             </div>
-                                            <div class="features-content" style="text-align: center !important;">
-                                                <p>...............</p>
-                                            </div>
                                         </div>
                                         <div class="col-sm-6 col-xs-12">
                                             <div class="features-img">
                                                 <img src="assets/images/roche_champion.jpg"
                                                     alt="" class="image">
                                             </div>
-                                            <div class="features-content" style="text-align: center !important;">
-                                                <p>...............</p>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-xs-12">
+                                        <div class="separator-border"></div>
+                                        <div class="head_title">
+                                            <h4>Le Mont d'Or (Métabief)</h4>
+                                            <div class="separator"></div>
+                                        </div>
                                         <div class="single_features_text"
                                             style="display: block !important; text-align: center !important;">
-                                            <p style="font-size: 1.5rem !important;">En vous
-                                                rendant sur le sommet du Mont d’or plus haut sommet du Doubs culminant à
-                                                1460m d’altitude,vous pourrez observer de beaux points de vues sur les
-                                                alpes en randonnant à pied ou à VTT sur ses sentiers </p>
+                                            <p style="font-size: 1.5rem !important; text-align: justify !important;">En vous rendant sur le sommet du Mont d’or, point culminant du
+                                                Doubs à 1460m d’altitude,vous pourrez observer de beaux
+                                                points de vue sur les Alpes françaises et suisses en randonnant
+                                                à pied ou à VTT sur ses sentiers. </p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -770,17 +866,11 @@
                                                 <img src="assets/images/un-veritable-plaisir-pour-les-yeux-1591032116.jpg"
                                                     alt="" class="image">
                                             </div>
-                                            <div class="features-content" style="text-align: center !important;">
-                                                <p>le Mont d’or</p>
-                                            </div>
                                         </div>
                                         <div class="col-sm-6 col-xs-12">
                                             <div class="features-img">
                                                 <img src="assets/images/au-sommet-du-mont-dor-1600x900.jpg"
                                                     alt="" class="image">
-                                            </div>
-                                            <div class="features-content" style="text-align: center !important;">
-                                                <p>le sommet du Mont d’or</p>
                                             </div>
                                         </div>
                                     </div>
@@ -793,61 +883,67 @@
         </div>
     </section>
 
-    <section id="Commerce" class="choose padding-con">
-        <div class="container">
-            <div class="row">
-                <div class="main_choose sections">
-                    <div class="col-sm-6">
-                        <div class="head_title">
-                            <h3>Commerce à proximité de Chaux-Neuve</h3>
-                            <div class="separator"></div>
+    <section id="Commerce"  class="features padding-con-left padding-con-bottom">
+        <div class="container" style="width: 100% !important; padding: 0 !important;">
+            <div class="row" style="margin-right: 0px !important;margin-left: 0px !important;">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="main_features_area">
+                        <div class="col-sm-6">
+                            <div class="head_title" style="margin-bottom: 40px !important;">
+                                <h3>Commerce à proximité de Chaux-Neuve</h3>
+                                <div class="separator"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div id="commerceMap" style="height: 850px; width: 100%;"></div>
                         </div>
                     </div>
-                    <div class="col-sm-12">
-                        <div id="commerceMap" style="height: 850px; width: 100%;"></div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="Restaurant" class="choose padding-con">
-        <div class="container">
-            <div class="row">
-                <div class="main_choose sections">
-                    <div class="col-sm-6">
-                        <div class="head_title">
-                            <h3>Restaurant à proximité de Chaux neuve</h3>
-                            <div class="separator"></div>
+    <section id="Restaurant"  class="features padding-con-left padding-con-bottom">
+        <div class="container" style="width: 100% !important; padding: 0 !important;">
+            <div class="row" style="margin-right: 0px !important;margin-left: 0px !important;">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="main_features_area">
+                        <div class="col-sm-6">
+                            <div class="head_title" style="margin-bottom: 40px !important;">
+                                <h3>Restaurant à proximité de Chaux neuve</h3>
+                                <div class="separator"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div id="restaurantMap" style="height: 850px; width: 100%;"></div>
                         </div>
                     </div>
-                    <div class="col-sm-12">
-                        <div id="restaurantMap" style="height: 850px; width: 100%;"></div>
-                    </div>
                 </div>
             </div>
+        </div>
     </section>
-
-    <section id="touristiques" class="choose padding-con">
-        <div class="container">
-            <div class="row">
-                <div class="main_choose sections">
-                    <div class="col-sm-6">
-                        <div class="head_title">
-                            <h3>sites touristiques à proximité de Chaux Neuve</h3>
-                            <div class="separator"></div>
-                        </div>                    
-                    </div>
-                    <div class="col-sm-12">
-                        <div id="touristMap" style="height: 850px; width: 100%;"></div>
+    
+    <section id="touristiques" class="features padding-con-left padding-con-bottom">
+        <div class="container" style="width: 100% !important; padding: 0 !important;">
+            <div class="row" style="margin-right: 0px !important;margin-left: 0px !important;">
+                <div class="col-sm-12 col-xs-12">
+                    <div class="main_features_area">
+                        <div class="col-sm-6">
+                            <div class="head_title" style="margin-bottom: 40px !important;">
+                                <h3>sites touristiques à proximité de Chaux Neuve</h3>
+                                <div class="separator"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div id="touristMap" style="height: 850px; width: 100%;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
-    <section class="footer">
+    <section class="footer" style="margin-top: 40px !important;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">

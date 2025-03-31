@@ -620,19 +620,14 @@ input::-ms-input-placeholder {
     margin-right: -30px;
 }
 
-.separator-border-bottom {
+.separator-border {
     height: 1px;
-    margin-bottom: 20px ;
+    margin-bottom: 30px;
+    margin-top: 30px;
     background: #4b5b6c;
     position: relative;
 }
 
-.separator-border-top {
-    height: 1px;
-    margin-top: 20px ;
-    background: #4b5b6c;
-    position: relative;
-}
 
 .padding-con{
     padding-left: 104px;
@@ -647,8 +642,8 @@ input::-ms-input-placeholder {
 
 .padding-con-bottom{
     padding-top: 79px;
-    padding-bottom: 128px;
-}
+/*     padding-bottom: 128px;
+ */}
 
 .image{
     height: 685px;
