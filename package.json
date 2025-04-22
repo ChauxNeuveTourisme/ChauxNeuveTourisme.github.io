@@ -2,7 +2,7 @@
   "homepage": "https:/ChauxNeuveTourisme.github.io/ChauxNeuveTourisme.github.io",
   "name": "lol",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
