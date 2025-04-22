@@ -1,11 +1,12 @@
 {
+  "homepage":"https://ChauxNeuveTourisme.github.io",
   "name": "lol",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -16,7 +17,6 @@
     "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.1.3",
     "date-fns": "^4.1.0",
-    "gh-pages": "^2.0.1",
     "lucide-react": "^0.501.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
