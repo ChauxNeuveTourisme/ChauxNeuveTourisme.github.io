@@ -1,0 +1,104 @@
+{
+  "title": "Que faire à Chaux-Neuve ?",
+  "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed maxime pariatur voluptatum natus amet corporis dolorem facere? Laudantium, veritatis molestiae autem dolore laborum nisi est perspiciatis cupiditate commodi, tenetur totam beatae ratione nemo, tempore voluptas fugiat. Fuga iure deleniti pariatur molestiae maxime quisquam minus vitae numquam tempora debitis, qui suscipit.",
+  "buttons": [
+    { "text": "Que faire ?", "href": "#" },
+    { "text": "Découvrir la Station", "href": "#" },
+    { "text": "Liens utiles", "href": "#" }
+  ],
+  "cards": [
+    {
+      "href": "#",
+      "imgSrc": "public/images/ims.jpeg",
+      "imgAlt": "imgAlt",
+      "title": "title",
+      "description": "description",
+      "category": "Que faire ?"
+    },
+    {
+      "href": "#",
+      "imgSrc": "public/images/ims.jpeg",
+      "imgAlt": "imgAlt",
+      "title": "title",
+      "description": "description",
+      "category": "Que faire ?"
+    },
+    {
+      "href": "#",
+      "imgSrc": "public/images/ims.jpeg",
+      "imgAlt": "imgAlt",
+      "title": "title",
+      "description": "description",
+      "category": "Que faire ?"
+    },
+    {"href": "#",
+      "imgSrc": "public/images/ims.jpeg",
+      "imgAlt": "imgAlt",
+      "title": "title",
+      "description": "description",
+      "category": "Que faire ?"
+    },
+    {
+      "href": "#",
+      "imgSrc": "public/images/ims.jpeg",
+      "imgAlt": "imgAlt",
+      "title": "title Découvrir la Station",
+      "description": "description",
+      "category": "Découvrir la Station"
+    },
+    {
+      "href": "#",
+      "imgSrc": "public/images/ims.jpeg",
+      "imgAlt": "imgAlt",
+      "title": "title Découvrir la Station",
+      "description": "description",
+      "category": "Découvrir la Station"
+    },
+    {
+      "href": "#",
+      "imgSrc": "public/images/ims.jpeg",
+      "imgAlt": "imgAlt",
+      "title": "title Découvrir la Station",
+      "description": "description",
+      "category": "Découvrir la Station"
+    },
+    {"href": "#",
+      "imgSrc": "public/images/ims.jpeg",
+      "imgAlt": "imgAlt",
+      "title": "title Découvrir la Station",
+      "description": "description",
+      "category": "Découvrir la Station"
+    },
+    {
+      "href": "#",
+      "imgSrc": "public/images/ims.jpeg",
+      "imgAlt": "imgAlt",
+      "title": "title Liens utiles",
+      "description": "description",
+      "category": "Liens utiles"
+    },
+    {
+      "href": "#",
+      "imgSrc": "public/images/ims.jpeg",
+      "imgAlt": "imgAlt",
+      "title": "title Liens utiles",
+      "description": "description",
+      "category": "Liens utiles"
+    },
+    {
+      "href": "#",
+      "imgSrc": "public/images/ims.jpeg",
+      "imgAlt": "imgAlt ",
+      "title": "title Liens utiles",
+      "description": "description",
+      "category": "Liens utiles"
+    },
+    {"href": "#",
+      "imgSrc": "public/images/ims.jpeg",
+      "imgAlt": "imgAlt",
+      "title": "title Liens utiles",
+      "description": "description",
+      "category": "Liens utiles"
+    }
+  ]
+}
