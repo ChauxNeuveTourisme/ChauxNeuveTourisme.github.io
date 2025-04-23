@@ -15,6 +15,9 @@ import Hebergements from "./pages/séjourner/hébergements/Hebergements";
 import ServicesDeSante from "./pages/séjourner/ServicesDeSanté/ServicesDeSante";
 import Commerces from "./pages/séjourner/commerces/Commerces";
 import Restauration from "./pages/séjourner/restauration/Restauration";
+import Mentions from "./pages/Mentions";
+import Donnees from "./pages/Donnees";
+import Conditions from "./pages/Conditions";
 
 const App = () => {
   return (
@@ -39,7 +42,11 @@ const App = () => {
           <Route path="/evenements" element={<Evenements />} />
           <Route path="/eventsPage" element={<EvenetPage />} />
 
-        <Route path="/faqs" element={<FAQ />} />
+          <Route path="/faqs" element={<FAQ />} />
+          <Route path="/mentions" element={<Mentions />} />
+          <Route path="/donnees" element={<Donnees />} />
+          <Route path="/conditions" element={<Conditions/>} />
+        
         </Routes>
       </main>
       <NewsLetterSection/>
