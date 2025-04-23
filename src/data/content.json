@@ -9,7 +9,7 @@
   "cards": [
     {
       "href": "#",
-      "imgSrc": "public/images/ims.jpeg",
+      "imgSrc": "/images/ims.jpeg",
       "imgAlt": "imgAlt",
       "title": "title",
       "description": "description",
@@ -17,7 +17,7 @@
     },
     {
       "href": "#",
-      "imgSrc": "public/images/ims.jpeg",
+      "imgSrc": "/images/ims.jpeg",
       "imgAlt": "imgAlt",
       "title": "title",
       "description": "description",
@@ -25,14 +25,14 @@
     },
     {
       "href": "#",
-      "imgSrc": "public/images/ims.jpeg",
+      "imgSrc": "/images/ims.jpeg",
       "imgAlt": "imgAlt",
       "title": "title",
       "description": "description",
       "category": "Que faire ?"
     },
     {"href": "#",
-      "imgSrc": "public/images/ims.jpeg",
+      "imgSrc": "/images/ims.jpeg",
       "imgAlt": "imgAlt",
       "title": "title",
       "description": "description",
@@ -40,7 +40,7 @@
     },
     {
       "href": "#",
-      "imgSrc": "public/images/ims.jpeg",
+      "imgSrc": "/images/ims.jpeg",
       "imgAlt": "imgAlt",
       "title": "title Découvrir la Station",
       "description": "description",
@@ -48,7 +48,7 @@
     },
     {
       "href": "#",
-      "imgSrc": "public/images/ims.jpeg",
+      "imgSrc": "/images/ims.jpeg",
       "imgAlt": "imgAlt",
       "title": "title Découvrir la Station",
       "description": "description",
@@ -56,14 +56,14 @@
     },
     {
       "href": "#",
-      "imgSrc": "public/images/ims.jpeg",
+      "imgSrc": "/images/ims.jpeg",
       "imgAlt": "imgAlt",
       "title": "title Découvrir la Station",
       "description": "description",
       "category": "Découvrir la Station"
     },
     {"href": "#",
-      "imgSrc": "public/images/ims.jpeg",
+      "imgSrc": "/images/ims.jpeg",
       "imgAlt": "imgAlt",
       "title": "title Découvrir la Station",
       "description": "description",
@@ -71,7 +71,7 @@
     },
     {
       "href": "#",
-      "imgSrc": "public/images/ims.jpeg",
+      "imgSrc": "/images/ims.jpeg",
       "imgAlt": "imgAlt",
       "title": "title Liens utiles",
       "description": "description",
@@ -79,7 +79,7 @@
     },
     {
       "href": "#",
-      "imgSrc": "public/images/ims.jpeg",
+      "imgSrc": "/images/ims.jpeg",
       "imgAlt": "imgAlt",
       "title": "title Liens utiles",
       "description": "description",
@@ -87,14 +87,14 @@
     },
     {
       "href": "#",
-      "imgSrc": "public/images/ims.jpeg",
+      "imgSrc": "/images/ims.jpeg",
       "imgAlt": "imgAlt ",
       "title": "title Liens utiles",
       "description": "description",
       "category": "Liens utiles"
     },
     {"href": "#",
-      "imgSrc": "public/images/ims.jpeg",
+      "imgSrc": "/images/ims.jpeg",
       "imgAlt": "imgAlt",
       "title": "title Liens utiles",
       "description": "description",

@@ -1,7 +1,12 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
 export default defineConfig({
-  base: '/',
+  base: '/ChauxNeuveTourisme.github.io/',
   plugins: [react()],
-})
+  build: {
+    outDir: 'dist',
+  },
+  server: {
+    fs: {
+      allow: ['.'],
+    },
+  },
+});
