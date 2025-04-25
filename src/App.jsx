@@ -11,7 +11,7 @@ import Hiver from "./pages/activites/hiver/Hiver";
 import Ete from "./pages/activites/été/Ete";
 import Patrimone from "./pages/activites/patrimone/Patrimone";
 import Gastronomie from "./pages/activites/gastronomie/Gastronomie";
-import Hebergements from "./pages/séjourner/hébergements/Hebergements";
+import Hebergements from "./pages/séjourner/hebergements/Hebergements";
 import ServicesDeSante from "./pages/séjourner/ServicesDeSanté/ServicesDeSante";
 import Commerces from "./pages/séjourner/commerces/Commerces";
 import Restauration from "./pages/séjourner/restauration/Restauration";

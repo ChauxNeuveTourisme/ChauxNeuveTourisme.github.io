@@ -7,7 +7,7 @@ function Evenements() {
     <div >
       <div className='container'>
       <HeroPages
-          titleText="Agenda de la semaine"
+          titleText="Agenda de ????"
           titleStyle="text-white"
           img="/images/ims.jpeg"
       />

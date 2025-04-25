@@ -36,6 +36,7 @@ const events = [
         date: "avril – juillet, 2025",
         location: "Chaux-Neuve",
         time: "à 00:00",
+        url: "/eventsPage",
         image:
             "/images/ims.jpeg",
     },
@@ -47,6 +48,7 @@ const events = [
         date: "avril – juillet, 2025",
         location: "Chaux-Neuve",
         time: "à 00:00",
+        url: "/eventsPage",
         image:
             "/images/ims.jpeg",
     },
@@ -58,6 +60,7 @@ const events = [
         date: "avril – juillet, 2025",
         location: "Chaux-Neuve",
         time: "à 00:00",
+        url: "/eventsPage",
         image:
             "/images/ims.jpeg",
     },
@@ -69,6 +72,7 @@ const events = [
         date: "avril – juillet, 2025",
         location: "Chaux-Neuve",
         time: "à 00:00",
+        url: "/eventsPage",
         image:
             "/images/ims.jpeg",
     },
@@ -80,6 +84,7 @@ const events = [
         date: "avril – juillet, 2025",
         location: "Chaux-Neuve",
         time: "à 00:00",
+        url: "/eventsPage",
         image:
             "/images/ims.jpeg",
     },

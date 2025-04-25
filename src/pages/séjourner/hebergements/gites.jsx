@@ -1,8 +1,13 @@
 import React from 'react'
 
-function Hebergements() {
+function gites() {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-[hsla(206,14%,97%,1)] dark:bg-gray-900 text-center px-4">
+            <HeroPages
+                titleText=" gîtes"
+                titleStyle="text-white"
+                img="/images/ims.jpeg"
+            />
             <h1 className="text-4xl sm:text-5xl font-bold text-basis-95 dark:text-white mb-4">
                 En cours de construction 🚧
             </h1>
@@ -13,4 +18,4 @@ function Hebergements() {
     )
 }
 
-export default Hebergements
+export default gites

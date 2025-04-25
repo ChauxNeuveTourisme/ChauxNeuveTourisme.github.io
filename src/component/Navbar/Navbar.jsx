@@ -99,52 +99,51 @@ const Navbar = () => {
 
       {/* Mobile Nav */}
       {mobileOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2">
-          {navItems.map((item, idx) => (
-            <div key={idx}>
-              <button
-                onClick={() =>
-                  item.submenu ? handleDropdown(idx) : setMobileOpen(false)
-                }
-                className="w-full flex justify-between items-center py-2 text-left hover:text-hover"
-              >
-                <span>{item.name}</span>
-                {item.submenu && (
-                  <FiChevronDown
-                    className={`transition-transform ${
-                      activeDropdown === idx ? "rotate-180" : ""
-                    }`}
-                  />
-                )}
-              </button>
+  <div className="md:hidden px-4 pb-4 space-y-2">
+    {navItems.map((item, idx) => (
+      <div key={idx}>
+        {item.submenu ? (
+          <>
+            <button
+              onClick={() => handleDropdown(idx)}
+              className="w-full flex justify-between items-center py-2 text-left hover:text-hover"
+            >
+              <span>{item.name}</span>
+              <FiChevronDown
+                className={`transition-transform ${
+                  activeDropdown === idx ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            {activeDropdown === idx && (
+              <div className="pl-4 space-y-1">
+                {item.submenu.map((sub, j) => (
+                  <Link
+                    key={j}
+                    to={sub.href}
+                    className="block text-sm text-white hover:text-hover py-1"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {sub.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </>
+        ) : (
+          <Link
+            to={item.href}
+            className="block py-2 text-sm text-white hover:text-hover"
+            onClick={() => setMobileOpen(false)}
+          >
+            {item.name}
+          </Link>
+        )}
+      </div>
+    ))}
+  </div>
+)}
 
-              {/* Submenu shown only if active */}
-              {item.submenu && activeDropdown === idx && (
-                <div className="pl-4 space-y-1">
-                  {item.submenu.map((sub, j) => (
-                    <Link
-                      key={j}
-                      to={sub.href}
-                      className="block text-sm text-white hover:text-hover py-1"
-                    >
-                      {sub.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-              {!item.submenu && (
-                <Link
-                  to={item.href}
-                  className="block py-2 text-sm text-white hover:text-hover"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              )}
-            </div>
-          ))}
-        </div>
-      )}
     </header>
   );
 };
