@@ -16,7 +16,7 @@ export const cardData = {
       {
         title: "Événements",
         description: "",
-        imageUrl: "../../public/images/Transjurassienne/Transjurassienne.jpg",
+        imageUrl: "/images/Transjurassienne/Transjurassienne.jpg",
         link: "/evenements"
       },
     ],

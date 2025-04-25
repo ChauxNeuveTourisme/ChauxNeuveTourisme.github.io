@@ -29,7 +29,7 @@ const places = [
     {
         name: "CHEZ LIADET",
         link: "#",
-        img: "../../../public/images/restauration/CHEZLIADET/Capture d’écran 2025-04-25 à 22.38.46.png",
+        img: "/images/restauration/CHEZLIADET/Capture-de-ecran.png",
         description: "",
     },
     {

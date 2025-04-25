@@ -2,7 +2,7 @@
 const callouts = [
     {
         name: 'Hôtels',
-        imageSrc: '../../../public/images/chaux-neuve/restaurant.jpg',
+        imageSrc: '/images/chaux-neuve/restaurant.jpg',
         imageAlt: 'Photo des appartements',
         href: '#',
     },
