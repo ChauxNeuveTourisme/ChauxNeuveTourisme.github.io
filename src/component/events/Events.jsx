@@ -177,8 +177,8 @@ export default function WeeklyCalendar() {
             return (
               <Link
                 key={event.id}
-                href={event.url}
-                className={`group  md:col-span-6 lg:col-span-4`}
+                to={event.url}
+                className="group md:col-span-6 lg:col-span-4"
               >
                 <div className=" lg:border-b lg:border-r border-gray-400 pb-4 h-full lg:pt-0  lg:px-3 cursor-pointer flex flex-col text-black lg:text-black lg:group-hover:text-white lg:hover:bg-black">
                   <div className="flex flex-row mb-12 lg:flex-col-reverse gap-3 lg:gap-4 px-4 pt-4 lg:px-0 lg:pt-0">
