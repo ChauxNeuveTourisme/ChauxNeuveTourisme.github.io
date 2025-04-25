@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 import { format, addWeeks, subWeeks } from "date-fns";
 import { fr } from "date-fns/locale";
+import { Link } from "react-router-dom";
 
 const days = [
   "Toute la semaine",
@@ -174,7 +175,7 @@ export default function WeeklyCalendar() {
         <div className="flex flex-col lg:grid grid-cols-12 pb-16 gap-6 divide-y divide-gray-200 lg:divide-y-0">
           {events.map((event, index) => {
             return (
-              <a
+              <Link
                 key={event.id}
                 href={event.url}
                 className={`group  md:col-span-6 lg:col-span-4`}
@@ -216,7 +217,7 @@ export default function WeeklyCalendar() {
                     </div>
                   </div>
                 </div>
-              </a>
+              </Link>
             );
           })}
         </div>
