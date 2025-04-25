@@ -10,13 +10,13 @@ export const cardData = {
       {
         title: "Restauration",
         description: "",
-        imageUrl: "/images/ims.jpeg",
+        imageUrl: "/images/restauration/LesClochettesDuRisoux/salle-de-restaurant.jpg",
         link: "/restauration"
       },
       {
         title: "Événements",
         description: "",
-        imageUrl: "/images/ims.jpeg",
+        imageUrl: "../../public/images/Transjurassienne/Transjurassienne.jpg",
         link: "/evenements"
       },
     ],

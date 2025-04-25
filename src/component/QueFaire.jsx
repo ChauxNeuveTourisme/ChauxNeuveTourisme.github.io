@@ -15,7 +15,7 @@ function QueFaire() {
     );
 
     return (
-        <section className="relative z-10 bg-white  lg:px-[104px]  py-[128px] lg:py-[128px]">
+        <section className="relative z-10 bg-white  lg:px-[104px]  py-16 lg:py-[128px]">
             <div className="container px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl  grid grid-cols-1 lg:grid-cols-12 gap-12">
                     {/* Left Content */}

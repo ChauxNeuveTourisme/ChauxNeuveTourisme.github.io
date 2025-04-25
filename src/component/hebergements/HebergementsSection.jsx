@@ -29,7 +29,7 @@ const DefaultIcon = () => (
  */
 const HebergementsSection = ({ title, paragraph, linkText, linkHref, icon: Icon = DefaultIcon }) => {
     return (
-        <section className="relative z-10 bg-white lg:px-[104px]  py-[15px]  pt-0 lg:py-[60px]">
+        <section className="relative z-10 bg-white lg:px-[104px]  py-16 lg:py-[60px]">
             <div className="container px-4 sm:px-6 lg:px-8">
                 <div className="lg:grid grid-cols-12 lg:gap-x-3">
                     {/* Left Column: Title & Link */}
