@@ -1,12 +1,14 @@
 // Card.js
 import React from 'react';
+import { Link } from 'react-router-dom'; // Use Link for internal routing
+
 
 const Card = ({ title, description, imageUrl, link}) => {
   return (
     <div>
       
       <div className="relative max-h-full max-w-full group/CardActivity min-w-[300px] bg-transparent">
-        <a href={link} className="" title={title}>
+        <Link to={link} className="" title={title}>
           <figure className="max-h-full max-w-full bg-transparent size-fit overflow-hidden w-full h-auto aspect-square relative">
             <img
               src={imageUrl}
@@ -40,7 +42,7 @@ const Card = ({ title, description, imageUrl, link}) => {
               <p className="Text_button1__Jch_r ml-2 text-justify">Explorer</p>
             </button>
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );
