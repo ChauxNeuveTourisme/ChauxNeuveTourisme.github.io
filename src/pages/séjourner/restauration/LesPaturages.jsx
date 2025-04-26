@@ -13,7 +13,7 @@ function LesPaturages() {
                 caption="Chapelle-des-Bois"
                 title="Les Pâturages"
                 dates={["Horaires d'ouverture", 'tous les jours, midi et soir']}
-                allDatesLink="#Tarifs"
+                allDatesLink=""
                 backLabel="Retour aux restaurations"   // <-- custom
                 backLink="/restauration"   
                 address={{

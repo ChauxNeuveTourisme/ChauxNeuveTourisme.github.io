@@ -16,7 +16,7 @@ function LeChaletDeLaSource() {
                 dates={['Fermeture du restaurant', 'Fermeture le Mardi & Mercredi'  
 
                     ]}
-                allDatesLink="#Tarifs"
+                allDatesLink=""
                 backLabel="Retour aux restaurations"   // <-- custom
                 backLink="/restauration"   
                 address={{

@@ -14,7 +14,7 @@ function CHEZLIADET() {
                 caption="Mouthe"
                 title="Chez Liadet"
                 dates={['Ouverture Restaurant ', 'Toute la semaine de 8:00 - 21:00, sauf le dimanche soir hors vacances scolaires']}
-                allDatesLink="#Tarifs"
+                allDatesLink=""
                 backLabel="Retour aux restaurations"   // <-- custom
                 backLink="/restauration"   
                 address={{

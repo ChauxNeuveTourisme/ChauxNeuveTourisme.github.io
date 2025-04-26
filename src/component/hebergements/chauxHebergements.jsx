@@ -18,7 +18,7 @@ const callouts = [
         name: 'Refuges et Cabanes',
         imageSrc: '/images/ims.jpeg',
         imageAlt: 'Photo des commerces',
-        href: '/refuges', // <-- example internal page
+        href: '/refugesCabanes', // <-- example internal page
     },
 ];
 

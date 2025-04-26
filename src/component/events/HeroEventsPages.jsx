@@ -51,20 +51,30 @@ const EventDetail = ({
 
         {/* Dates */}
         <div className="border-b border-gray-300 py-6">
-          <div className="grid grid-cols-3 gap-x-4">
-            <p className="font-medium text-gray-800 mb-[.75rem]">Dates</p>
-            <div className="col-span-2 text-right space-y-2">
-              {dates.map((date, idx) => (
-                <p key={idx} className="text-lg">{date}</p>
-              ))}
+          <div className="grid grid-cols-3 gap-x-4 items-center">
+            {allDatesLink && (
+              <p className="font-medium text-gray-800 mb-[.75rem]">Dates</p>
+            )}
+
+            <div className="col-span-2 text-center space-y-2">
+              {dates && (
+                dates.map((date, idx) => (
+                  <p key={idx} className="text-lg">{date}</p>
+                ))
+              )}
+
               {allDatesLink && (
-                <a href={allDatesLink} className="hover:text-blue-600 hover:underline">
+                <a
+                  href={allDatesLink}
+                  className="hover:text-blue-600 hover:underline block"
+                >
                   Voir toutes les dates
                 </a>
               )}
             </div>
           </div>
         </div>
+
 
         {/* Address */}
         <div className="border-b border-gray-300 py-6">
@@ -99,18 +109,18 @@ const EventDetail = ({
             </div>
           )}
           {website && (
-            <div className="flex items-center gap-2">
-              <span className="material-m shrink-0">explore</span>
-              <a
-                href={website.startsWith('http') ? website : `https://${website}`}
-                className="hover:text-blue-600 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {website.replace(/^https?:\/\//, '')}
-              </a>
-            </div>
-          )}
+          <div className="flex items-center gap-2">
+            <span className="material-m shrink-0">explore</span>
+            <a
+              href={website.startsWith('http') ? website : `https://${website}`}
+              className="hover:text-blue-600 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {website.replace(/^https?:\/\//, '')}
+            </a>
+          </div>
+        )}
 
         </div>
       </div>

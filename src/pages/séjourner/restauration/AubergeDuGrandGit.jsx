@@ -12,8 +12,8 @@ function AubergeDuGrandGit() {
                 imageAlt="Chaux-Neuve"
                 caption="Chaux-Neuve"
                 title="Auberge du Grand Git"
-                dates={['Toujours ouvert', 'Le 9 mai 2025']}
-                allDatesLink="#Tarifs"
+                dates={["Horaires d'ouverture", 'tous les jours, midi et soir']}
+                allDatesLink=""
                 backLabel="Retour aux restaurations"   // <-- custom
                 backLink="/restauration"   
                 address={{

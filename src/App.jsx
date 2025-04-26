@@ -27,12 +27,14 @@ import RestaurantLaTableDuCébriot from "./pages/séjourner/restauration/Restaur
 import Gites from "./pages/séjourner/hebergements/gites";
 import Hotels from "./pages/séjourner/hebergements/hotels";
 import RefugesCabanes from "./pages/séjourner/hebergements/refugesCabanes";
+import ScrollToTop from "./component/ScrollToTop";
 
 
 const App = () => {
   return (
     <>
       <Navbar />
+      <ScrollToTop />
 
       <main className="min-h-screen">
         <Routes>
