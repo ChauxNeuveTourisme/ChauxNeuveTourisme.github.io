@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Use Link for internal routing
 
 const EventDetail = ({
   imageSrc,
@@ -36,13 +37,13 @@ const EventDetail = ({
       {/* TEXT SECTION */}
       <div className="w-full lg:w-5/12 lg:py-8 xl:py-[5rem] pt-[30px] lg:pt-0 px-4 xl:px-[5rem] 2xl:px-[6.5rem]">
         {/* Back Link */}
-        <a
-          href={backLink}
+        <Link
+          to={backLink}
           className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors duration-300"
         >
           <span className="material-m">arrow_back</span>
           {backLabel}
-        </a>
+        </Link>
 
         {/* Title */}
         <h1 className="text-3xl font-semibold border-b border-gray-300 py-6">
