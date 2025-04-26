@@ -1,7 +1,7 @@
 // `cardsData` is passed to `CardGrid` dynamically
 // CardGrid.js
 import React from 'react';
-import Card from './Card';
+import Card from '/src/component/card';
 
 const CardGrid = ({ cardsData, sectionTitle = "Explorer également" }) => {
   return (

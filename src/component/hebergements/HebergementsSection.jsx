@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link
 
 /**
  * Custom default icon – neutral by default, red on hover
@@ -29,7 +30,7 @@ const DefaultIcon = () => (
  */
 const HebergementsSection = ({ title, paragraph, linkText, linkHref, icon: Icon = DefaultIcon }) => {
     return (
-        <section className="relative z-10 bg-white lg:px-[104px]  py-16 lg:py-[60px]">
+        <section className="relative z-10 bg-white lg:px-[104px] py-16 lg:py-[60px]">
             <div className="container px-4 sm:px-6 lg:px-8">
                 <div className="lg:grid grid-cols-12 lg:gap-x-3">
                     {/* Left Column: Title & Link */}
@@ -38,17 +39,29 @@ const HebergementsSection = ({ title, paragraph, linkText, linkHref, icon: Icon 
                             {title}
                         </p>  
                         {linkText && linkHref && (
-                        <a
-                            href={linkHref}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="mt-4 flex items-center gap-2 text-black font-medium group transition-colors hover:text-red-600"
-                        >
-                            <Icon />
-                            <span className="transition-colors group-hover:text-red-600">{linkText}</span>
-                        </a>
+                            linkHref.startsWith('http') ? (
+                                <a
+                                    href={linkHref}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-4 flex items-center gap-2 text-black font-medium group transition-colors hover:text-red-600"
+                                >
+                                    <Icon />
+                                    <span className="transition-colors group-hover:text-red-600">{linkText}</span>
+                                </a>
+                            ) : (
+                                <Link
+                                    to={linkHref}
+                                    className="mt-4 flex items-center gap-2 text-black font-medium group transition-colors hover:text-red-600"
+                                >
+                                    <Icon />
+                                    <span className="transition-colors group-hover:text-red-600">{linkText}</span>
+                                </Link>
+                            )
                         )}
+
                     </div>  
+                    
                     {/* Right Column: Description */}
                     <div className="w-full mt-10 lg:mt-0 col-span-6">
                         <div className="flex flex-col mb-6 lg:mb-10 last:mb-0 lg:w-5/6">
@@ -62,4 +75,3 @@ const HebergementsSection = ({ title, paragraph, linkText, linkHref, icon: Icon 
 };
 
 export default HebergementsSection;
-

@@ -24,6 +24,9 @@ import LeChaletDeLaSource from "./pages/séjourner/restauration/LeChaletDeLaSour
 import LesClochettesDuRisouxt from "./pages/séjourner/restauration/LesClochettesDuRisoux";
 import LesPaturages from "./pages/séjourner/restauration/LesPaturages";
 import RestaurantLaTableDuCébriot from "./pages/séjourner/restauration/RestaurantLaTableDuCébriot";
+import Gites from "./pages/séjourner/hebergements/gites";
+import Hotels from "./pages/séjourner/hebergements/hotels";
+import RefugesCabanes from "./pages/séjourner/hebergements/refugesCabanes";
 
 
 const App = () => {
@@ -36,6 +39,10 @@ const App = () => {
           <Route path="/" element={<Decouvrir />} />
           <Route path="/decouvrir" element={<Decouvrir />} />
           <Route path="/hebergements" element={<Hebergements />} />
+          <Route path="/gites" element={<Gites />} />
+          <Route path="/hotels" element={<Hotels />} />
+          <Route path="/refugesCabanes" element={<RefugesCabanes/>} />
+
           <Route path="/restauration" element={<Restauration />} />
           <Route path="/aubergeDuGrandGit" element={<AubergeDuGrandGit />} />
           <Route path="/cHEZLIADET" element={<CHEZLIADET />} />

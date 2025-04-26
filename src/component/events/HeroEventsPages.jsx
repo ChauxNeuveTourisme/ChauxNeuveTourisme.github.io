@@ -102,15 +102,16 @@ const EventDetail = ({
             <div className="flex items-center gap-2">
               <span className="material-m shrink-0">explore</span>
               <a
-                href={website}
+                href={website.startsWith('http') ? website : `https://${website}`}
                 className="hover:text-blue-600 hover:underline"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 {website.replace(/^https?:\/\//, '')}
               </a>
             </div>
           )}
+
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react'
+import HeroPages from '../../../component/hero/HeroPages'
 
-function refugesCabanes() {
+function RefugesCabanes() {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-[hsla(206,14%,97%,1)] dark:bg-gray-900 text-center px-4">
             <HeroPages
@@ -18,4 +19,4 @@ function refugesCabanes() {
     )
 }
 
-export default refugesCabanes
+export default RefugesCabanes
