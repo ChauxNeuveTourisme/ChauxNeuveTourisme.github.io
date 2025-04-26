@@ -10,7 +10,7 @@ export const cardData = {
       {
         title: "Restauration",
         description: "",
-        imageUrl: "/images/restauration/LesClochettesDuRisoux/salle-de-restaurant.jpg",
+        imageUrl: "/images/restauration/Capture-de-ecran.png",
         link: "/restauration"
       },
       {

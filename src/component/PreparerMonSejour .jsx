@@ -1,11 +1,11 @@
 
 const callouts = [
     {
-      name: 'Appartements',
-      description: 'Appartements à Chaux neuve',
-      imageSrc: '/images/ims.jpeg',
-      imageAlt: 'Photo des appartements',
-      href: '#',
+      name: 'Restaurant',
+      description: 'Restaurant à Chaux neuve',
+      imageSrc: '../../public/images/restauration/Capture-de-ecran.png',
+      imageAlt: 'Photo des Restaurant',
+      href: '/restauration',
     },
     {
       name: 'Hôtels',

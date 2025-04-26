@@ -4,7 +4,7 @@ export const cardData = {
         {
             title: "Hebergements",
             description: "",
-            imageUrl: "/images/ims.jpeg",
+            imageUrl: "/images/hebergements/les-hebergements-meaux-marne-ourcq-mellie-jumelle-aspect-ratio-2000-800.jpg",
             link: "/hebergements"
         },
         {

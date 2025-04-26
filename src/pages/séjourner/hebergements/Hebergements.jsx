@@ -12,7 +12,7 @@ function Hebergements() {
             <HeroPages
                 titleText="Hébergements"
                 titleStyle="text-white"
-                img="/images/ims.jpeg"
+                img="/images/hebergements/les-hebergements-meaux-marne-ourcq-mellie-jumelle-aspect-ratio-2000-800.jpg"
             />
             <HebergementsSection
                 title="À Chaux-Neuve, profitez de la gamme d'hébergement la plus vaste en montagne."

@@ -12,8 +12,8 @@ function Restauration() {
         <div>
             <HeroPages
                 titleText="Les restaurants"
-                titleStyle="text-white"
-                img="/images/ims.jpeg"
+                titleStyle="text-black"
+                img="/images/restauration/restaurants-trieves-aspect-ratio.png"
             />
             <HebergementsSection
                 title="De la traditionnelle fondue aux mets des cuisines internationales, profitez des meilleures tables à Chaux-Neuve."

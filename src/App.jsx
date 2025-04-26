@@ -18,6 +18,13 @@ import Restauration from "./pages/séjourner/restauration/Restauration";
 import Mentions from "./pages/Mentions";
 import Donnees from "./pages/Donnees";
 import Conditions from "./pages/Conditions";
+import AubergeDuGrandGit from "./pages/séjourner/restauration/AubergeDuGrandGit";
+import CHEZLIADET from "./pages/séjourner/restauration/CHEZLIADET";
+import LeChaletDeLaSource from "./pages/séjourner/restauration/LeChaletDeLaSource";
+import LesClochettesDuRisouxt from "./pages/séjourner/restauration/LesClochettesDuRisoux";
+import LesPaturages from "./pages/séjourner/restauration/LesPaturages";
+import RestaurantLaTableDuCébriot from "./pages/séjourner/restauration/RestaurantLaTableDuCébriot";
+
 
 const App = () => {
   return (
@@ -30,6 +37,14 @@ const App = () => {
           <Route path="/decouvrir" element={<Decouvrir />} />
           <Route path="/hebergements" element={<Hebergements />} />
           <Route path="/restauration" element={<Restauration />} />
+          <Route path="/aubergeDuGrandGit" element={<AubergeDuGrandGit />} />
+          <Route path="/cHEZLIADET" element={<CHEZLIADET />} />
+          <Route path="/leChaletDeLaSource" element={<LeChaletDeLaSource />} />
+          <Route path="/lesClochettesDuRisoux" element={<LesClochettesDuRisouxt />} />
+          <Route path="/lesPaturages" element={<LesPaturages/>} />
+          <Route path="/restaurantLaTableDuCébriot" element={<RestaurantLaTableDuCébriot/>} />
+
+          
           <Route path="/commerces" element={<Commerces />} />
           <Route path="/services-de-sante" element={<ServicesDeSante/>} />
           <Route path="/hiver" element={<Hiver/>}/>

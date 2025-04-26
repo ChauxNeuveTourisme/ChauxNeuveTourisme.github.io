@@ -3,7 +3,7 @@ import React from "react";
 const Calendrier = ({ events = [] }) => {
     return (
         <div id="Agenda" className="anchor-section">
-            <section className="max-w-screen-3xl mx-auto relative bg-[hsla(206,14%,97%,1)]  px-4 sm:px-8 xl:px-20 2xl:px-28 py-16 xl:py-24 2xl:py-32">
+            <section className="max-w-screen-3xl mx-auto relative bg-[hsla(206,14%,97%,1)] px-4 sm:px-8 lg:px-[104px]  py-16 lg:py-[30px]">
                 <header className="border-b border-gray-300  mb-12 flex flex-wrap items-center justify-between gap-4 pb-6">
                     <h2 className="text-3xl font-bold text-basis-95 ">Calendrier</h2>
                 </header>

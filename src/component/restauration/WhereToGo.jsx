@@ -4,37 +4,37 @@ import React from "react";
 const places = [
     {
         name: "Restaurant La Table Du Cébriot",
-        link: "#",
+        link: "/restaurantLaTableDuCébriot",
         img: "/images/restauration/TableDuCébriot/caption-1.jpg",
         description: "",
     },
     {
         name: "Auberge du Grand Git",
-        link: "#",
+        link: "/aubergeDuGrandGit",
         img: "/images/restauration/AubergeDuGrandGit/auberge-du-grand-git-3.jpg",
         description: "",
     },
     {
         name: "Les Clochettes du Risoux",
-        link: "#",
+        link: "/lesClochettesDuRisoux",
         img: "/images/restauration/LesClochettesDuRisoux/caption-11.jpg",
         description: "",
     },
     {
         name: "Les Paturages",
-        link: "#",
+        link: "/lesPaturages",
         img: "/images/restauration/LesPaturages/photo4jpg.jpg",
         description: "",
     },
     {
         name: "CHEZ LIADET",
-        link: "#",
+        link: "/cHEZLIADET",
         img: "/images/restauration/CHEZLIADET/Capture-de-ecran.png",
         description: "",
     },
     {
         name: "Le Chalet de la Source",
-        link: "#",
+        link: "/leChaletDeLaSource",
         img: "/images/restauration/ChaletDeLaSource/20180325_113329.webp",
         description: "",
     },

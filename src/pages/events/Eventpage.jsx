@@ -13,7 +13,6 @@ import  { prixGeneral } from '../../component/events/tarifsEvent'
 function Eventpage() {
     return (
         <div >
-            
             <EventDetail
                 imageSrc="/images/ims.jpeg"
                 imageAlt="Chaux-Neuve"

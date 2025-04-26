@@ -45,7 +45,9 @@ const Navbar = () => {
     <header className="bg-navy text-white w-full sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-1">
         <div className="text-xl font-bold">
-          <img src="/images/logo-25.png" alt="Logo" className="h-[130px] aspect-[16/9] pt-0 w-full object-cover"/>
+          <Link to="/">
+            <img src="/images/logo-25.png" alt="Logo" className="h-[130px] aspect-[16/9] pt-0 w-full object-cover"/>
+          </Link>
         </div>
 
         <button className="md:hidden pr-[10px]" onClick={() => setMobileOpen(!mobileOpen)}>

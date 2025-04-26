@@ -10,7 +10,9 @@ const EventDetail = ({
   phone,
   email,
   website,
-  allDatesLink
+  allDatesLink,
+  backLabel = "Retour à l'agenda", // <-- Default if not passed
+  backLink = "/evenements",         // <-- Default if not passed
 }) => {
   return (
     <div className="max-w-[120rem] mx-auto flex flex-col lg:flex-row pb-24">
@@ -24,7 +26,7 @@ const EventDetail = ({
             className="h-full w-full object-cover aspect-video"
           />
           {caption && (
-            <figcaption className=" lg:absolute right-6 top-6 lg:bottom-4 lg:right-4 lg:top-auto text-white bg-black bg-opacity-40 px-2 py-1 rounded ">
+            <figcaption className="lg:absolute right-6 top-6 lg:bottom-4 lg:right-4 lg:top-auto text-white bg-black bg-opacity-40 px-2 py-1 rounded">
               © {caption}
             </figcaption>
           )}
@@ -35,12 +37,12 @@ const EventDetail = ({
       <div className="w-full lg:w-5/12 lg:py-8 xl:py-[5rem] pt-[30px] lg:pt-0 px-4 xl:px-[5rem] 2xl:px-[6.5rem]">
         {/* Back Link */}
         <a
-  href="/evenements"
-  className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors duration-300"
->
-  <span className="material-m">arrow_back</span>
-  Retour à l'agenda
-</a>
+          href={backLink}
+          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors duration-300"
+        >
+          <span className="material-m">arrow_back</span>
+          {backLabel}
+        </a>
 
         {/* Title */}
         <h1 className="text-3xl font-semibold border-b border-gray-300 py-6">
@@ -56,7 +58,7 @@ const EventDetail = ({
                 <p key={idx} className="text-lg">{date}</p>
               ))}
               {allDatesLink && (
-                <a href={allDatesLink} className="text-blue-500 underline">
+                <a href={allDatesLink} className="hover:text-blue-600 hover:underline">
                   Voir toutes les dates
                 </a>
               )}
@@ -83,7 +85,7 @@ const EventDetail = ({
           {phone && (
             <div className="flex items-center gap-2">
               <span className="material-m shrink-0">call</span>
-              <a href={`tel:${phone}`} className="text-blue-600 hover:underline">
+              <a href={`tel:${phone}`} className="hover:text-blue-600 hover:underline">
                 {phone}
               </a>
             </div>
@@ -91,7 +93,7 @@ const EventDetail = ({
           {email && (
             <div className="flex items-center gap-2">
               <span className="material-m shrink-0">mail</span>
-              <a href={`mailto:${email}`} className="text-blue-600 hover:underline">
+              <a href={`mailto:${email}`} className="hover:text-blue-600 hover:underline">
                 {email}
               </a>
             </div>
@@ -101,7 +103,7 @@ const EventDetail = ({
               <span className="material-m shrink-0">explore</span>
               <a
                 href={website}
-                className="text-blue-600 hover:underline"
+                className="hover:text-blue-600 hover:underline"
                 target="_blank"
                 rel="noreferrer"
               >

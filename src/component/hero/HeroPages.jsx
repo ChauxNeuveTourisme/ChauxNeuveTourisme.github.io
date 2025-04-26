@@ -12,7 +12,7 @@ export default function HeroPages({ titleText, titleStyle = "", img }) {
 
             {/* Centered Row */}
             <div className="absolute inset-0 flex justify-center items-center">
-                <div className="mt-[529px] p-[70px] z-2 container  lg:mb-12">
+                <div className="mt-[529px]  p-[20px] lg:p-[70px] z-2 container  lg:mb-12">
                     {/* Hero Text */}
                     <div>
                         <h1 className={`text-[32px] leading-[32px] font-bold  mb-3 ${titleStyle}`}>
