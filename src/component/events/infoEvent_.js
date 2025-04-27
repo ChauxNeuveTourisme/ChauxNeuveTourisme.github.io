@@ -21,7 +21,23 @@ export const infoEvent_ = {
             content: 'Train schedules and station details.',
         },
     ],
-    
+    Transjurassienne: [
+        { 
+            icon: 'info', 
+            title: 'Quand ', 
+            content: 'Chaque année, le deuxième week-end de février.',
+        },
+        { 
+            icon: 'directions_car', 
+            title: 'Où', 
+            content: 'Traversée du Haut-Jura, de Lamoura à Mouthe, en passant par Chaux-Neuve.',
+        },
+        { 
+            icon: 'directions_bus', 
+            title: 'Pour qui ', 
+            content: 'Amateurs de ski nordique, sportifs confirmés, familles, et passionnés de montagne.',
+        },
+    ],
     eventInfo: [
         { 
             icon: 'info', 

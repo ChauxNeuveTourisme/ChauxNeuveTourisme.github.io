@@ -14,55 +14,61 @@ function Eventpage() {
     return (
         <div >
             <EventDetail
-                imageSrc="/images/ims.jpeg"
+                imageSrc="/images/Transjurassienne/Transjurassienne.jpg"
                 imageAlt="Chaux-Neuve"
                 caption="Chaux-Neuve"
-                title="Title"
-                dates={['Toujours ouvert', 'Le 9 mai 2025']}
-                allDatesLink="#Tarifs"
+                title="La Transjurassienne "
+                dates={[' Quand', 'février 2026.']}
+                allDatesLink=""
                 address={{
                     label: 'Chaux-Neuve',
-                    details: 'Route de .........',
+                    details: 'Traversée du Haut-Jura, de Lamoura à Mouthe, en passant par Chaux-Neuve.',
                 }}
-                phone="+33333333"
-                email="test@test.com"
-                website="url"
+                phone=""
+                email=""
+                website=""
             />
+            {/*
             <ScrollToHash />
-            <AnchorNav />
+            <AnchorNav />*/}
             <Description
-                introText="Depuis 16 ans, Lorem Ipsum accueille de nombreux spectateurs dans sa magnifique salle lors de spectacles humoristiques ou concerts entraînants."
+                introText="Une course mythique au cœur du Haut-Jura. <be/> Chaque hiver, la Transjurassienne fait vibrer les passionnés de ski nordique dans toute la région. Cette course de fond de renommée internationale traverse les somptueux paysages du Massif du Jura, et parmi les villages emblématiques du parcours, Chaux-Neuve occupe une place de choix."
                 paragraphs={[
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at suscipit nunc. Donec ut sapien non sem volutpat tincidunt.",
-                    "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer id justo nec metus bibendum varius.",
-                    "Aliquam erat volutpat. In hac habitasse platea dictumst. Curabitur nec mauris at elit fringilla tristique."
+                    "Située dans la vallée du Val de Mouthe, Chaux-Neuve est connue pour son stade de saut à ski, mais aussi comme point de passage stratégique de la Transjurassienne. Les skieurs y trouvent :",
+                    "Une ambiance chaleureuse avec des bénévoles et spectateurs motivés",
+                    "Un ravitaillement important pour les coureurs",
+                    "Un cadre naturel grandiose entre forêts, combes et plateaux enneigés.",
+
                 ]}
-                listTitle="Programme à venir :"
+                listTitle="Une immersion totale dans le Jura nordique"
                 listItems={[
-                    "Vendredi 21 février, 20h30 : ....",
-                    "Vendredi 7 mars, 20h30 : ....",
-                    "Vendredi 4 avril, 20h30 : ....",
-                    "Vendredi 9 mai, 20h30 : ......",
+                    "Pendant la Transjurassienne, Chaux-Neuve devient un véritable village événementiel. C’est l’occasion de :",
+                    "Découvrir le patrimoine nordique jurassien.",
+                    "Profiter d’animations locales.",
+                    "Encourager les athlètes dans une ambiance conviviale.",
+                    "Goûter aux produits du terroir jurassien.",
+
                 ]}
             />              
 
             <Calendrier
                 events={[
-                    "Toujours ouvert, Le 23 mai 2025",
-                    "Toujours ouvert, Le 12 septembre 2025",
-                    "Toujours ouvert, Le 3 octobre 2025",
-                    "Toujours ouvert, Le 31 octobre 2025",
-                    "Toujours ouvert, Le 9 mai 2026",
+                    "Chaque année, le deuxième week-end de février.",
 
                 ]}
             />
+            <InformationsPratiques
+                sectionTitle="Information"
+                data={infoEvent_.Transjurassienne}
+            />
+            {/*
             <InformationsPratiques
                 sectionTitle="Location Information"
                 data={infoEvent_.locationInfo}
             />
             <TarifsSection  
                 prices={prixGeneral}
-            />
+            />*/}
 
             
         </div>
