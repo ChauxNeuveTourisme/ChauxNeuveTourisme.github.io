@@ -12,14 +12,14 @@ const callouts = [
     {
         name: 'Hôtels',
         description: 'Hôtels à Chaux neuve',
-        imageSrc: '/images/ims.jpeg',
+        imageSrc: '/images/chaux-neuve/restaurant.jpg',
         imageAlt: 'Photo des hôtels',
         href: '/hotels',
     },
     {
         name: 'Commerces',
         description: 'Commerces et services à Chaux neuve',
-        imageSrc: '/images/ims.jpeg',
+        imageSrc: '/images/commerces/Maximarche/000499906_896x598_c.jpg',
         imageAlt: 'Photo des commerces',
         href: '/commerces',
     },
