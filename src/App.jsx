@@ -28,6 +28,20 @@ import Gites from "./pages/séjourner/hebergements/gites";
 import Hotels from "./pages/séjourner/hebergements/hotels";
 import RefugesCabanes from "./pages/séjourner/hebergements/refugesCabanes";
 import ScrollToTop from "./component/ScrollToTop";
+import CoupeEuropeChauxNeuve from "./pages/events/Coupe-Europe-Chaux-Neuve";
+import TrailDuMont from "./pages/events/TrailDuMont";
+import TourDeFrance from "./pages/events/TourDeFrance";
+import FestivalDeLaPaille from "./pages/events/FestivalDeLaPaille";
+import SummerGrandPrix from "./pages/events/SummerGrandPrix";
+import LocationDeSki from "./pages/séjourner/commerces/LocationDeSki";
+import MaximarcheFoncineLeHaut from "./pages/séjourner/commerces/MaximarcheFoncineLeHaut";
+import LaBelFoncine from "./pages/séjourner/commerces/LaBelFoncine";
+import BoulangerieLeEpicurien from "./pages/séjourner/commerces/BoulangerieLeEpicurien";
+import SupermarcheBi1 from "./pages/séjourner/commerces/SupermarcheBi1";
+import EpicerieChezChantal from "./pages/séjourner/commerces/EpicerieChezChantal";
+import Saucisse from "./pages/activites/gastronomie/Saucisse";
+import Fromages from "./pages/activites/gastronomie/Fromages";
+import Distilleries from "./pages/activites/gastronomie/Distilleries";
 
 
 const App = () => {
@@ -55,16 +69,31 @@ const App = () => {
 
           
           <Route path="/commerces" element={<Commerces />} />
+          <Route path="/locationDeSki" element={<LocationDeSki />} />
+          <Route path="/maximarcheFoncineLeHaut" element={<MaximarcheFoncineLeHaut />} />
+          <Route path="/laBelFoncine" element={<LaBelFoncine />} />
+          <Route path="/boulangerieLeEpicurien" element={<BoulangerieLeEpicurien />} />
+          <Route path="/supermarcheBi1" element={<SupermarcheBi1 />} />
+          <Route path="/epicerieChezChantal" element={<EpicerieChezChantal />} />
+          
           <Route path="/services-de-sante" element={<ServicesDeSante/>} />
           <Route path="/hiver" element={<Hiver/>}/>
           <Route path="/ete" element={<Ete/>} /> 
           <Route path="/patrimone" element={<Patrimone />} /> 
-          <Route path="/gastronomie" element={<Gastronomie />} /> 
-
+          <Route path="/gastronomie" element={<Gastronomie />} />
+          <Route path="/saucisse" element={<Saucisse />} /> 
+          <Route path="/fromages" element={<Fromages />} /> 
+          <Route path="/distilleries" element={<Distilleries />} /> 
+          
 
 
           <Route path="/evenements" element={<Evenements />} />
           <Route path="/eventsPage" element={<EvenetPage />} />
+          <Route path="/coupeEuropeChauxNeuve" element={<CoupeEuropeChauxNeuve />} />
+          <Route path="/summerGrandPrix" element={<SummerGrandPrix/>} />
+          <Route path="/festivalDeLaPaille" element={<FestivalDeLaPaille />} />
+          <Route path="/trailDuMont" element={<TrailDuMont />} />
+          <Route path="/tourDeFrance" element={<TourDeFrance />} />
 
           <Route path="/faqs" element={<FAQ />} />
           <Route path="/mentions" element={<Mentions />} />

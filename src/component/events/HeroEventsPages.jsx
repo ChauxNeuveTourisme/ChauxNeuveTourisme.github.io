@@ -24,7 +24,7 @@ const EventDetail = ({
             src={imageSrc}
             alt={imageAlt}
             loading="lazy"
-            className="h-full w-full object-cover aspect-video"
+            className="h-full  w-full aspect-video object-cover"
           />
           {caption && (
             <figcaption className="lg:absolute right-6 top-6 lg:bottom-4 lg:right-4 lg:top-auto text-white bg-black bg-opacity-40 px-2 py-1 rounded">

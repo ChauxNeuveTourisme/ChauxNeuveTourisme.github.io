@@ -1,15 +1,22 @@
-import React from 'react'
+import React from "react";
+import HeroPages from "../../../component/hero/HeroPages";
+import CardGrid from "../../../component/pushCard";
+import { GastronomieData } from "../../../data/restaurationCard";
 
-function Gastronomie() {
+const Gastronomie = () => {
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-[hsla(206,14%,97%,1)] dark:bg-gray-900 text-center px-4">
-            <h1 className="text-4xl sm:text-5xl font-bold text-basis-95 dark:text-white mb-4">
-                En cours de construction 🚧
-            </h1>
-            <p className="text-lg text-basis-70 dark:text-gray-400 max-w-xl">
-                Cette page est actuellement en développement!
-            </p>
-        </div>    )
-}
+        <div>
+            <HeroPages
+                titleText="Produits locaux, terroir"
+                titleStyle="text-white"
+                img="/images/gastronomie/1920x1440_haut-doubs-le-phare-bar-terrasse-produit-terroir-salaison-fromages-celine-guichard-664.jpg"
+            />
+            <CardGrid 
+                sectionTitle =""
+                cardsData={GastronomieData.Card}
+            />
+        </div>
+    );
+};
 
 export default Gastronomie

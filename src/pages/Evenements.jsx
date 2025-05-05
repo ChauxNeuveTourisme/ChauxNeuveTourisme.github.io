@@ -9,7 +9,7 @@ function Evenements() {
       <HeroPages
           titleText="Agenda de ????"
           titleStyle="text-white"
-          img="/images/ims.jpeg"
+          img="/images/TourDeFrance/pontarlier2.jpg"
       />
       <WeekView/>
       </div>

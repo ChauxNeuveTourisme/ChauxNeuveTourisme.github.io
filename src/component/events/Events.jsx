@@ -18,6 +18,18 @@ const days = [
 const events = [
     {
         id: 1,
+        title: "Coupe d’Europe de Saut et de Combiné Nordique",
+        dateRange: "du 10 au 12",
+        days: "vendredi—Dimanche",
+        date: "janvier, 2025",
+        location: "Chaux-Neuve",
+        time: "",
+        url: "/coupeEuropeChauxNeuve",
+        image:
+            "/images/competition-internationale-Chaux-Neuve/competition-internationale-Chaux-Neuve-1.jpg",
+    },
+    {
+        id: 2,
         title: "Transjurassienne",
         dateRange: "",
         days: "",
@@ -29,65 +41,53 @@ const events = [
             "/images/Transjurassienne/Transjurassienne.jpg",
     },
     {
-        id: 2,
-        title: "title!",
-        dateRange: "du 22 au 4",
-        days: "Mardi—Vendredi",
-        date: "avril – juillet, 2025",
+        id: 3,
+        title: "Summer Grand Prix d’Été à Chaux-Neuve",
+        dateRange: "du 30 au 1",
+        days: "Vendredi-samedi-Dimanche",
+        date: "août-septembre  , 2024",
         location: "Chaux-Neuve",
-        time: "",
-        url: "/eventsPage",
+        time: " 9h00",
+        url: "/summerGrandPrix",
         image:
-            "/images/ims.jpeg",
-    },
-    {
-      id: 3,
-      title: "title!",
-      dateRange: "du 22 au 4",
-      days: "Mardi—Vendredi",
-      date: "avril – juillet, 2025",
-      location: "Chaux-Neuve",
-      time: "",
-      url: "/eventsPage",
-      image:
-          "/images/ims.jpeg",
+            "/images/SummerGrandPrix/859deed03158388a0d2757c49a873336.jpg",
     },
     {
       id: 4,
-      title: "title!",
-      dateRange: "du 22 au 4",
-      days: "Mardi—Vendredi",
-      date: "avril – juillet, 2025",
-      location: "Chaux-Neuve",
+      title: "Trail du Mont d'Or",
+      dateRange: "du 14 au 15",
+      days: "samedi-dimanche",
+      date: " juin, 2025",
+      location: "METABIEF",
       time: "",
-      url: "/eventsPage",
+      url: "/trailDuMont",
       image:
-          "/images/ims.jpeg",
+          "/images/TrailDuMont/trail-mont-d-Or.jpg",
   },
   {
-    id: 5,
-    title: "title!",
-    dateRange: "du 22 au 4",
-    days: "Mardi—Vendredi",
-    date: "avril – juillet, 2025",
-    location: "Chaux-Neuve",
-    time: "",
-    url: "/eventsPage",
-    image:
-        "/images/ims.jpeg",
-},
-    {
-        id: 6,
-        title: "title!",
-        dateRange: "du 22 au 4",
-        days: "Mardi—Vendredi",
-        date: "avril – juillet, 2025",
-        location: "Chaux-Neuve",
-        time: "à 00:00",
-        url: "/eventsPage",
-        image:
-            "/images/ims.jpeg",
+      id: 5,
+      title: "Tour de France 2025 - 20e étape",
+      dateRange: "26",
+      days: "Samedi  ",
+      date: "juillet, 2025",
+      location: "PONTARLIER",
+      time: "",
+      url: "/tourDeFrance",
+      image:
+          "/images/TourDeFrance/tour-de-france-2025.jpg",
     },
+    {
+      id: 6,
+      title: "Festival de la Paille 2025",
+      dateRange: "du 1 au 3",
+      days: "Vendredi- samedi-dimanche",
+      date: " août , 2025",
+      location: "Métabief",
+      time: "",
+      url: "/festivalDeLaPaille",
+      image:
+          "/images/FestivalDeLaPaille/FestivaldelaPaille.jpg",
+  },
 
 ];
 
@@ -217,7 +217,7 @@ export default function WeeklyCalendar() {
                         alt="Visuel de l'événement"
                         loading="lazy"
                         src={event.image}
-                        className="object-cover w-full h-full"
+                        className=" w-full h-full"
                       />
                     </div>
                   </div>
