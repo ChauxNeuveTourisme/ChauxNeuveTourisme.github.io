@@ -32,7 +32,7 @@ function TourDeFrance() {
             <ScrollToHash />
             <AnchorNav />*/}
             <Description
-                introText="OLa Ville de Pontarlier et ses élus sont heureux de recevoir la 20e étape du Tour de France. Cette étape Nantua > Pontarlier (185km) donne l'occasion à la Ville d'être pour la 8e fois de son histoire ville étape du Tour de France."
+                introText="La Ville de Pontarlier et ses élus sont heureux de recevoir la 20e étape du Tour de France. Cette étape Nantua > Pontarlier (185km) donne l'occasion à la Ville d'être pour la 8e fois de son histoire ville étape du Tour de France."
                 paragraphs={[
                     "",
                 ]}
