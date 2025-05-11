@@ -47,7 +47,7 @@ const hotels = [
   {
     title: "Hôtel l'Atelier de Donat",
     location: "Malbuisson",
-    img: "../../../../public/images/hebergements/hotel/HôtelLeAtelierDeDonat/16.jpg",
+    img: "/images/hebergements/hotel/HôtelLeAtelierDeDonat/16.jpg",
     url: "#",
     lat: 46.80241997112748, 
     lng: 6.305129997601264,
