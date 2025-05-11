@@ -4,7 +4,7 @@ export const cardData = {
       {
         title: "Patrimone",
         description: "",
-        imageUrl: "/images/ims.jpeg",
+        imageUrl: "/images/patrimone/Chateaux/haut-doubs-chateau-joux-fort-malher-point-vue-celine-guichard-11538.jpg",
         link: "/patrimone"
       },
       {

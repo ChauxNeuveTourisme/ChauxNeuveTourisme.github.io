@@ -45,3 +45,44 @@ export const GastronomieData = {
     ],
 };
 
+export const PatrimoineData = {
+    Card: [
+        {
+            title: "Maison de la Réserve",
+            description: "",
+            imageUrl: "/images/patrimone/MaisonDeLaReserve/1-.jpg",
+            link: "/maisonDeLaReserve"
+        },
+        {
+            title: "l'Ecomusée Maison Michaud",
+            description: "",
+            imageUrl: "/images/patrimone/EcomuseeMaison/600_sc_20240618-140615.webp",
+            link: "/ecomuseeMaison"
+        },
+        {
+            title: "Eglise saint jacques",
+            description: "",
+            imageUrl: "/images/patrimone/EgliseSaintJacques/Chaux-Neuve_-_img_44384.jpg",
+            link: "/egliseSaintJacques"
+        },
+        {
+            title: "Les Légendes",
+            description: "",
+            imageUrl: "/images/patrimone/LesLegendes/haut-doubs-lac-legende-saintpoint-damvauthier-14498.jpg",
+            link: "/lesLegendes"
+        },
+        {
+            title: "Les Alpages",
+            description: "",
+            imageUrl: "/images/patrimone/LesAlpages/haut-doubs-lac-morond-station-metabief-aurelie-roy-11540.jpg",
+            link: "/lesAlpages"
+        },
+        {
+            title: "Châteaux dans le Haut-Doubs",
+            description: "",
+            imageUrl: "/images/patrimone/Chateaux/haut-doubs-chateau-joux-fort-malher-point-vue-celine-guichard-11538.jpg",
+            link: "/chateaux"
+        },
+    ],
+};
+

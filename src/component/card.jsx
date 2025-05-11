@@ -49,3 +49,4 @@ const Card = ({ title, description, imageUrl, link}) => {
 };
 
 export default Card;
+

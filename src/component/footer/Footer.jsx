@@ -20,7 +20,7 @@ const Footer = () => {
                     <FaMapMarkerAlt className="text-hover" /> 23 Rue des Montagnes
                 </p>
                 <p className="text-sm mb-2 flex items-center gap-2">
-                    <FaEnvelope className="text-hover" /> contact@chauxneuvetourisme.fr
+                    <FaEnvelope className="text-hover" /> contact@chauxneuvetourisme.github.io
                 </p>
                 <p className="text-sm flex items-center gap-2">
                     <FaPhone className="text-hover" /> +33 3 84 12 34 56

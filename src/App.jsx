@@ -24,9 +24,6 @@ import LeChaletDeLaSource from "./pages/séjourner/restauration/LeChaletDeLaSour
 import LesClochettesDuRisouxt from "./pages/séjourner/restauration/LesClochettesDuRisoux";
 import LesPaturages from "./pages/séjourner/restauration/LesPaturages";
 import RestaurantLaTableDuCébriot from "./pages/séjourner/restauration/RestaurantLaTableDuCébriot";
-import Gites from "./pages/séjourner/hebergements/gites";
-import Hotels from "./pages/séjourner/hebergements/hotels";
-import RefugesCabanes from "./pages/séjourner/hebergements/refugesCabanes";
 import ScrollToTop from "./component/ScrollToTop";
 import CoupeEuropeChauxNeuve from "./pages/events/Coupe-Europe-Chaux-Neuve";
 import TrailDuMont from "./pages/events/TrailDuMont";
@@ -42,6 +39,15 @@ import EpicerieChezChantal from "./pages/séjourner/commerces/EpicerieChezChanta
 import Saucisse from "./pages/activites/gastronomie/Saucisse";
 import Fromages from "./pages/activites/gastronomie/Fromages";
 import Distilleries from "./pages/activites/gastronomie/Distilleries";
+import EgliseSaintJacques from "./pages/activites/patrimone/EgliseSaintJacques /EgliseSaintJacques";
+import LesLegendes from "./pages/activites/patrimone/LesLegendes/LesLegendes";
+import LesAlpages from "./pages/activites/patrimone/LesAlpages/LesAlpages";
+import Chateaux from "./pages/activites/patrimone/Chateaux/Chateaux";
+import MaisonDeLaReserve from "./pages/activites/patrimone/MaisonDeLaReserve/MaisonDeLaReserve";
+import EcomuseeMaison from "./pages/activites/patrimone/EcomuseeMaison/EcomuseeMaison ";
+import RefugesCabanesListingPage from "./pages/séjourner/hebergements/refugesCabanes";
+import HotelListingPage from "./pages/séjourner/hebergements/hotels";
+import GitesListingPage from "./pages/séjourner/hebergements/gites";
 
 
 const App = () => {
@@ -54,11 +60,19 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Decouvrir />} />
           <Route path="/decouvrir" element={<Decouvrir />} />
+          {/*   Hebergements  */}
           <Route path="/hebergements" element={<Hebergements />} />
-          <Route path="/gites" element={<Gites />} />
-          <Route path="/hotels" element={<Hotels />} />
-          <Route path="/refugesCabanes" element={<RefugesCabanes/>} />
 
+          {/*   Gites */}
+          <Route path="/gites" element={<GitesListingPage />} />
+
+          {/*   Hotel */}
+          <Route path="/hotels" element={<HotelListingPage />} />
+
+          {/* Refuges et Cabanes */}
+          <Route path="/refugesCabanes" element={<RefugesCabanesListingPage/>} />
+
+          {/*   Restauration  */}
           <Route path="/restauration" element={<Restauration />} />
           <Route path="/aubergeDuGrandGit" element={<AubergeDuGrandGit />} />
           <Route path="/cHEZLIADET" element={<CHEZLIADET />} />
@@ -67,7 +81,7 @@ const App = () => {
           <Route path="/lesPaturages" element={<LesPaturages/>} />
           <Route path="/restaurantLaTableDuCébriot" element={<RestaurantLaTableDuCébriot/>} />
 
-          
+          {/*   Commerces */}
           <Route path="/commerces" element={<Commerces />} />
           <Route path="/locationDeSki" element={<LocationDeSki />} />
           <Route path="/maximarcheFoncineLeHaut" element={<MaximarcheFoncineLeHaut />} />
@@ -75,18 +89,33 @@ const App = () => {
           <Route path="/boulangerieLeEpicurien" element={<BoulangerieLeEpicurien />} />
           <Route path="/supermarcheBi1" element={<SupermarcheBi1 />} />
           <Route path="/epicerieChezChantal" element={<EpicerieChezChantal />} />
-          
+
+          {/*   services de Sante  */}
           <Route path="/services-de-sante" element={<ServicesDeSante/>} />
+
+          {/*   Hiver */}
           <Route path="/hiver" element={<Hiver/>}/>
+
+          {/*   Ete  */}
           <Route path="/ete" element={<Ete/>} /> 
-          <Route path="/patrimone" element={<Patrimone />} /> 
+
+          {/*   Patrimone  */}
+          <Route path="/patrimone" element={<Patrimone />} />
+          <Route path="/maisonDeLaReserve" element={<MaisonDeLaReserve />} />
+          <Route path="/ecomuseeMaison" element={<EcomuseeMaison />} />
+          <Route path="/chateaux" element={<Chateaux />} />
+          <Route path="/lesAlpages" element={<LesAlpages />} />
+          <Route path="/lesLegendes" element={<LesLegendes />} />
+          <Route path="/egliseSaintJacques" element={<EgliseSaintJacques />} />
+
+          {/* Gastronomie */}
           <Route path="/gastronomie" element={<Gastronomie />} />
           <Route path="/saucisse" element={<Saucisse />} /> 
           <Route path="/fromages" element={<Fromages />} /> 
           <Route path="/distilleries" element={<Distilleries />} /> 
           
 
-
+          {/*  Evenements */}
           <Route path="/evenements" element={<Evenements />} />
           <Route path="/eventsPage" element={<EvenetPage />} />
           <Route path="/coupeEuropeChauxNeuve" element={<CoupeEuropeChauxNeuve />} />
@@ -94,7 +123,7 @@ const App = () => {
           <Route path="/festivalDeLaPaille" element={<FestivalDeLaPaille />} />
           <Route path="/trailDuMont" element={<TrailDuMont />} />
           <Route path="/tourDeFrance" element={<TourDeFrance />} />
-
+          {/* Footer */}
           <Route path="/faqs" element={<FAQ />} />
           <Route path="/mentions" element={<Mentions />} />
           <Route path="/donnees" element={<Donnees />} />

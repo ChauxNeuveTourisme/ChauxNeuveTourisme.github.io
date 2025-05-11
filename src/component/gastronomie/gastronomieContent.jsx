@@ -2,7 +2,7 @@ import React from 'react'
 
 const GastronomieContent = ({ title, text, imgSrc, imgAlt, reverse = false, link }) => {
     return (
-        <div className="flex flex-wrap items-center mb-20">
+        <div className="flex flex-wrap items-center mb-20 ">
             <div className={`w-full md:w-1/2 ${reverse ? 'order-last md:pl-10' : 'md:pr-10'}`}>
                 <h4 className="text-3xl text-gray-800 font-bold mb-3">{title}</h4>
                 <p className="text-gray-600 mb-6">{text}</p>

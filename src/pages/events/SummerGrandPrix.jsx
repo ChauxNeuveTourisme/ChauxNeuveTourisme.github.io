@@ -18,14 +18,14 @@ function SummerGrandPrix() {
 
                 imageAlt="Chaux-Neuve"
                 caption="Chaux-Neuve"
-                title="Transhumance des vaches"
+                title="Summer Grand Prix d’Été à Chaux-Neuve"
                 dates={[' Quand', 'du 30 août au 1er septembre 2024,.']}
                 allDatesLink=""
                 address={{
                     label: 'Chaux-Neuve',
                     details: 'Le tremplin de Chaux-Neuve.',
                 }}
-                phone=" "
+                phone=""
                 email=""
                 website="https://www.facebook.com/chauxneuve/?locale=fr_FR"
             />
