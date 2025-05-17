@@ -18,7 +18,7 @@ const navItems = [
     submenu: [
       { name: "Hiver", href: "/hiver" },
       { name: "Été", href: "/ete" },
-      { name: "Patrimone", href: "/patrimone" },
+      { name: "Patrimoine", href: "/patrimone" },
       { name: "Gastronomie", href: "/gastronomie" },
     ],
   },

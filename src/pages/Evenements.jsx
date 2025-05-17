@@ -7,7 +7,7 @@ function Evenements() {
     <div >
       <div className='container'>
       <HeroPages
-          titleText="Agenda de ????"
+          titleText="Animation"
           titleStyle="text-white"
           img="/images/TourDeFrance/pontarlier2.jpg"
       />
