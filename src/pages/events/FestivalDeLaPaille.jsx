@@ -14,7 +14,7 @@ function FestivalDeLaPaille() {
     return (
         <div >
             <EventDetail
-                imageSrc="../../../public/images/FestivalDeLaPaille/festival-de-la-paille--1200x766.jpg"
+                imageSrc="/images/FestivalDeLaPaille/festival-de-la-paille--1200x766.jpg"
                 imageAlt="Métabief"
                 caption="Métabief"
                 title="Festival de la Paille"

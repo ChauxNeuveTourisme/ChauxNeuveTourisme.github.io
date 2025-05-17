@@ -48,6 +48,7 @@ import EcomuseeMaison from "./pages/activites/patrimone/EcomuseeMaison/EcomuseeM
 import RefugesCabanesListingPage from "./pages/séjourner/hebergements/refugesCabanes";
 import HotelListingPage from "./pages/séjourner/hebergements/hotels";
 import GitesListingPage from "./pages/séjourner/hebergements/gites";
+import HotelLesTremplins from "./pages/séjourner/hebergements/hotelsPage/HotelLesTremplins";
 
 
 const App = () => {
@@ -68,6 +69,8 @@ const App = () => {
 
           {/*   Hotel */}
           <Route path="/hotels" element={<HotelListingPage />} />
+          <Route path="/hotelLesTremplins" element={<HotelLesTremplins />} />
+
 
           {/* Refuges et Cabanes */}
           <Route path="/refugesCabanes" element={<RefugesCabanesListingPage/>} />

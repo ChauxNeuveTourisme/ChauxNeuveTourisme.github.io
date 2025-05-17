@@ -10,13 +10,13 @@ const callouts = [
     },
     {
         name: "Gîtes et chambres d'hôtes",
-        imageSrc: '/images/ims.jpeg',
+        imageSrc: '/images/hebergements/Gites/LesEterlous/79e4c25d.jpg',
         imageAlt: 'Photo des hôtels',
         href: '/gites', // <-- example internal page
     },
     {
         name: 'Refuges et Cabanes',
-        imageSrc: '/images/ims.jpeg',
+        imageSrc: "/images/hebergements/RefugesCabanes/LesEcrinsDuVal/5003a10ee8587ac80da442e7973c60b5-terrasse-bois-du-four--1600x0.jpg",
         imageAlt: 'Photo des commerces',
         href: '/refugesCabanes', // <-- example internal page
     },

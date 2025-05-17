@@ -61,7 +61,24 @@
     text-transform: none;
     -webkit-font-smoothing: antialiased;
 }
-  
+
+.material-s {
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-size: var(--font-size-16);
+    letter-spacing: var(--letter-spacing-016);
+    line-height: var(--line-height-20);
+}
+
+.label-xs {
+    font-optical-sizing: auto;
+    font-size: var(--font-size-14);
+    font-style: normal;
+    font-weight: var(--font-weight-400);
+    letter-spacing: var(--letter-spacing-014);
+    line-height: var(--line-height-18);
+}
 
 @media (min-width: 1024px) {
     :root {
