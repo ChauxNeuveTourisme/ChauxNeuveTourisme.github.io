@@ -29,7 +29,7 @@ const LocationSection = ({ lat, lng, title, address }) => {
                 <GoogleMap
                     mapContainerStyle={containerStyle}
                     center={center}
-                    zoom={14}
+                    zoom={16}
                 >
                 <Marker position={center} />
                 </GoogleMap>

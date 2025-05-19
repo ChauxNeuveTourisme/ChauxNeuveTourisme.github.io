@@ -14,6 +14,7 @@ const HotelDetails = ({
     email,
     website,
     allDatesLink,
+    val= true,
     backLabel = "Retour", // <-- Default if not passed
     backLink = "/hotels",         // <-- Default if not passed
   }) => {
@@ -124,10 +125,12 @@ const HotelDetails = ({
         </div>
 
         {/* Rating */}
+        {val &&(
         <span className="inline-flex items-center justify-center rounded-full px-4 py-2 border shadow bg-gray-100 dark:bg-white text-gray-800 dark:text-black border-gray-200 dark:border-gray-300">
-  <span className="material-icons text-base mr-2">grade</span>
-  <span className="text-sm">3 étoiles</span>
-</span>
+          <span className="material-icons text-base mr-2">grade</span>
+          <span className="text-sm">3 étoiles</span>
+        </span>
+        )}
 
       </div>
     </div>

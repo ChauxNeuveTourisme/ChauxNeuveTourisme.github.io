@@ -49,6 +49,20 @@ import RefugesCabanesListingPage from "./pages/séjourner/hebergements/refugesCa
 import HotelListingPage from "./pages/séjourner/hebergements/hotels";
 import GitesListingPage from "./pages/séjourner/hebergements/gites";
 import HotelLesTremplins from "./pages/séjourner/hebergements/hotelsPage/HotelLesTremplins";
+import HotelRestaurantLeLac from "./pages/séjourner/hebergements/hotelsPage/HotelRestaurantLeLac";
+import HotelAubergeDuGrandGit from "./pages/séjourner/hebergements/hotelsPage/HotelAubergeDuGrandGit";
+import HotelAtelierDeDonat from "./pages/séjourner/hebergements/hotelsPage/hotelAtelierDeDonat";
+import HotelRestaurantLeRisoux from "./pages/séjourner/hebergements/hotelsPage/HotelRestaurantLeRisoux";
+import LaRedouteLesRousses from "./pages/séjourner/hebergements/hotelsPage/LaRedouteLesRousses";
+import HerveLeChatelet from "./pages/séjourner/hebergements/gitesPages/HerveLeChatelet";
+import LaBatieDessous from "./pages/séjourner/hebergements/gitesPages/LaBatieDessous";
+import ChezLiadet from "./pages/séjourner/hebergements/gitesPages/ChezLiadet";
+import LogeDuTremplin from "./pages/séjourner/hebergements/gitesPages/LogeDuTremplin";
+import LaMaisonDuMontagnon from "./pages/séjourner/hebergements/gitesPages/LaMaisonDuMontagnon";
+import LesEterlous from "./pages/séjourner/hebergements/gitesPages/LesEterlous";
+import CampingDeLaSource from "./pages/séjourner/hebergements/refugesCabanesPages/CampingDeLaSource";
+import LesEcrins from "./pages/séjourner/hebergements/refugesCabanesPages/LesEcrins";
+import RoulotteDeLaJaique from "./pages/séjourner/hebergements/refugesCabanesPages/RoulotteDeLaJaique";
 
 
 const App = () => {
@@ -66,14 +80,28 @@ const App = () => {
 
           {/*   Gites */}
           <Route path="/gites" element={<GitesListingPage />} />
+          <Route path="/herveLeChatelet" element={<HerveLeChatelet />} />
+          <Route path="/laBatieDessous" element={<LaBatieDessous/>} />
+          <Route path="/chezLiadet" element={<ChezLiadet />} />
+          <Route path="/logeDuTremplin" element={<LogeDuTremplin />} />
+          <Route path="/laMaisonDuMontagnon" element={<LaMaisonDuMontagnon />} />
+          <Route path="/lesEterlous" element={<LesEterlous />} />
 
           {/*   Hotel */}
           <Route path="/hotels" element={<HotelListingPage />} />
           <Route path="/hotelLesTremplins" element={<HotelLesTremplins />} />
-
-
+          <Route path="/hotelRestaurantLeLac" element={<HotelRestaurantLeLac />} />
+          <Route path="/hotelAubergeDuGrandGit" element={<HotelAubergeDuGrandGit />} />
+          <Route path="/hotelAtelierDeDonat" element={<HotelAtelierDeDonat />} />
+          <Route path="/hotelRestaurantLeRisoux" element={<HotelRestaurantLeRisoux />} />
+          <Route path="/laRedouteLesRousses" element={<LaRedouteLesRousses />} />
+          
           {/* Refuges et Cabanes */}
           <Route path="/refugesCabanes" element={<RefugesCabanesListingPage/>} />
+          <Route path="/roulotteDeLaJaique" element={<RoulotteDeLaJaique/>} />
+          <Route path="/campingDeLaSource" element={<CampingDeLaSource/>} />
+          <Route path="/lesEcrins" element={<LesEcrins/>} />
+          
 
           {/*   Restauration  */}
           <Route path="/restauration" element={<Restauration />} />

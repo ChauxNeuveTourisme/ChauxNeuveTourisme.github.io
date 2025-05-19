@@ -21,23 +21,23 @@ const refugesCabanes = [
         title: "Les Ecrins du Val de Mouthe",
         location: "Mouthe",
         img: "/images/hebergements/RefugesCabanes/LesEcrinsDuVal/5003a10ee8587ac80da442e7973c60b5-terrasse-bois-du-four--1600x0.jpg",
-        url: "#",
+        url: "/lesEcrins",
         lat: 46.69491625263858, 
         lng: 6.175715060560305,
     },
     {
-        title: "camping de la source",
+        title: "Camping de la Source du Doubs",
         location: "Mouthe",
-        img: "/images/hebergements/RefugesCabanes/campingDeLaSource/DSC1999-HDR.jpg",
-        url: "#",
+        img: "/images/hebergements/RefugesCabanes/campingDeLaSource/ygf.jpg",
+        url: "/campingDeLaSource",
         lat: 46.70629503200852, 
         lng: 6.208081637133776,
     },
     {
         title: "La roulotte de la Jaique",
         location: "Chaux-Neuve",
-        img: "/images/hebergements/RefugesCabanes/RefugeEnRoulotte/snLzUlaA5X4DttZDzTKdbrHx1zU (1).jpg",
-        url: "#",
+        img: "/images/hebergements/RefugesCabanes/RefugeEnRoulotte/22.avif",
+        url: "/roulotteDeLaJaique",
         lat: 46.624495812707586,
         lng: 6.181186268757452,
     },
@@ -67,6 +67,7 @@ const RefugesCabanesListingPage = () => {
             <div className="w-full md:w-1/2 overflow-y-auto max-h-screen p-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {refugesCabanes.map((rC, i) => (
+                        <Link to={rC.url} >
                         <div
                             key={i}
                             onMouseEnter={() => setActiveIndex(i)}
@@ -85,6 +86,7 @@ const RefugesCabanesListingPage = () => {
                                 <p className="text-gray-500">{rC.location}</p>
                             </div>
                         </div>
+                        </Link>
                     ))}
                 </div>
             </div>

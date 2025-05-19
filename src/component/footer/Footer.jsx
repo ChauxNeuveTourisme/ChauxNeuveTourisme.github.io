@@ -73,7 +73,7 @@ const Footer = () => {
                 <div className="space-y-4">
                     <h3 className="text-lg font-semibold mb-4">ChauxNeuveTourisme</h3>
                     <ul className="space-y-2 text-sm mb-4">
-                    <li><a href="mailto:info@chauxneuvetourisme.com" className="hover:text-hover">Nous contacter</a></li>
+                    <li><a href="mailto:chauxneuvetourisme@gmail.com" className="hover:text-hover">Nous contacter</a></li>
                     <li><Link to="/faqs" className="hover:text-hover">FAQ</Link></li>
                     </ul>
                     <p className="text-sm mb-3">Suivez-nous <span className="italic text-hover"></span></p>

@@ -10,24 +10,22 @@ import lgZoom from 'lightgallery/plugins/zoom';
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-thumbnail.css';
 import 'lightgallery/css/lg-zoom.css';
-
-const Gallery = ({ images = [] }) => {
+const Gallery = ({ images = [], maxItems = 3 }) => {
   if (images.length === 0) return null;
 
   return (
-    <section className="max-w-screen-3xl mx-auto relative bg-white px-4 sm:px-8 lg:px-[104px]  py-16 lg:py-[30px]">
+    <section className="max-w-screen-3xl mx-auto relative bg-white px-4 sm:px-8 lg:px-[104px] py-16 lg:py-[30px]">
       {/* Header */}
       <header className="border-b border-gray-700 mb-12 flex flex-wrap items-center justify-between gap-4 pb-6">
-          <h2 className="text-3xl font-bold text-gray-900">
-            Gallery
-          </h2>
-      </header> 
+        <h2 className="text-3xl font-bold text-gray-900">Gallery</h2>
+      </header>
+
       <LightGallery
         speed={500}
         plugins={[lgThumbnail, lgZoom]}
         elementClassNames="grid grid-cols-1 gap-y-4 lg:gap-x-4 lg:grid-cols-3 lightgallery-vue"
       >
-        {images.slice(0, 3).map((img, index) => (
+        {images.slice(0, maxItems).map((img, index) => (
           <a
             key={index}
             href={img.full}
