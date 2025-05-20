@@ -91,7 +91,6 @@ const Footer = () => {
                 <div className="flex flex-col lg:flex-row justify-center items-center space-y-2 lg:space-y-0 lg:space-x-8">
                     <span>© 2025 ChauxNeuveTourisme. Tous droits réservés.</span>
                     <Link to="/mentions" className="hover:text-hover">Mentions légales</Link>
-                    <Link to="/donnees" className="hover:text-hover">Données et cookies</Link>
                     <Link to="/conditions" className="hover:text-hover">Conditions générales de vente</Link>
                 </div>
             </div>

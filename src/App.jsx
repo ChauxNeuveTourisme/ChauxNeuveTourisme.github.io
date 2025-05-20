@@ -80,6 +80,7 @@ import BRC3 from "./pages/activites/été/VeloEtVTT/BRC3";
 import RandonneeMoutheChauxNeuve from "./pages/activites/été/Randonnee/RandonneeMoutheChauxNeuve";
 import RandonneeChauxNeuveChatelblanc from "./pages/activites/été/Randonnee/RandonneeChauxNeuveChatelblanc";
 import RandonneeChauxNeuve from "./pages/activites/été/Randonnee/RandonneeChauxNeuve";
+import CookieConsent from "./component/CookieConsent";
 
 
 const App = () => {
@@ -201,6 +202,7 @@ const App = () => {
         </Routes>
       </main>
       <NewsLetterSection/>
+      <CookieConsent/>
       <Footer />
     </>
   );

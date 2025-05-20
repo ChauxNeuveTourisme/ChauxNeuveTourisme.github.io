@@ -3,12 +3,12 @@ import React from 'react'
 function Donnees() {
     return (
         <section className="max-w-screen-3xl mx-auto relative bg-light dark:bg-basis-90 px-16 xl:px-80 2xl:px-104 py-64 xl:py-104 2xl:py-128">
-      <header className="separator-border-bottom mb-48 flex flex-wrap items-center justify-between gap-16 pb-12">
-        <section>
-          <h2 className="heading-l text-basis-95 dark:text-light mb-0">Généralités</h2>
-        </section>
-        <div className="flex flex-col items-center gap-24 md:flex-row" />
-      </header>
+            <header className="separator-border-bottom mb-48 flex flex-wrap items-center justify-between gap-16 pb-12">
+                <section>
+                    <h2 className="heading-l text-basis-95 dark:text-light mb-0">Généralités</h2>
+                </section>
+                <div className="flex flex-col items-center gap-24 md:flex-row" />
+            </header>
 
       <div className="grid grid-cols-1">
         <div>
