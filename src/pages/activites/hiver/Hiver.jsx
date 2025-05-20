@@ -1,14 +1,28 @@
 import React from 'react'
+import HebergementsSection from '../../../component/hebergements/HebergementsSection'
+import ChauxHebergements from '../../../component/hebergements/chauxHebergements'
+import CardGrid from '../../../component/pushCard'
+import { cardData } from '../../../data/hebergementsCard'
+import HeroPages from '../../../component/hero/HeroPages'
+import { StationDeSki } from '../../../data/ActivitesHiver'
+import PricingTable from '../../../component/ForfaitsTable'
 
 function Hiver() {
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-[hsla(206,14%,97%,1)] dark:bg-gray-900 text-center px-4">
-            <h1 className="text-4xl sm:text-5xl font-bold text-basis-95 dark:text-white mb-4">
-                En cours de construction 🚧
-            </h1>
-            <p className="text-lg text-basis-70 dark:text-gray-400 max-w-xl">
-                Cette page est actuellement en développement!
-            </p>
+        <div>
+            <HeroPages
+                titleText="Activités hiver"
+                titleStyle="text-black"
+                img="/images/EnHiver/1920x1440_haut-doubs-ski-fond-nordique-hiver-niege-ben-becker-706.jpg"
+            />
+            <ChauxHebergements callouts={StationDeSki}/>
+            
+            {/*
+            <PricingTable
+                title="Tarifs Ski – Enfants & Adultes"
+                description="Adulte à partir de 18 ans | Enfants de 3 à 17 ans"
+                data={tarifsFoncineleHaut}
+            />*/ }
         </div>
     )
 }

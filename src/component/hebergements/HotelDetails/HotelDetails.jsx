@@ -15,6 +15,7 @@ const HotelDetails = ({
     website,
     allDatesLink,
     val= true,
+    open = true,
     backLabel = "Retour", // <-- Default if not passed
     backLink = "/hotels",         // <-- Default if not passed
   }) => {
@@ -67,12 +68,24 @@ const HotelDetails = ({
           <div className="grid grid-cols-3 gap-x-4">
             <p className="font-semibold">Horaires</p>
             <div className="col-span-2 text-end">
-              <div className="flex items-center gap-x-2 justify-end">
-                <span className="block w-3 h-3 rounded-full bg-green-500"></span>
-                <p>Ouvert aujourd'hui</p>
+            {open ? (
+              <div>
+                <div className="flex items-center gap-x-2 justify-end">
+                  <span className="block w-3 h-3 rounded-full bg-green-500"></span>
+                  <p>Ouvert aujourd'hui</p>
+                </div>
+                <p className="text-lg font-semibold">Toute la journée</p>
               </div>
-              <p className="text-lg font-semibold">Toute la journée</p>
-            </div>
+            ) : (
+              <div>
+                <div className="flex items-center gap-x-2 justify-end">
+                  <span className="block w-3 h-3 rounded-full bg-gray-500"></span>
+                  <p>Fermé</p>
+                </div>
+                <p className="text-lg font-semibold">Toute la journée</p>
+              </div>
+            )}
+          </div>
           </div>
         </div>
 

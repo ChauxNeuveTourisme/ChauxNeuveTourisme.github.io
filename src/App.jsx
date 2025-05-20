@@ -63,6 +63,23 @@ import LesEterlous from "./pages/séjourner/hebergements/gitesPages/LesEterlous"
 import CampingDeLaSource from "./pages/séjourner/hebergements/refugesCabanesPages/CampingDeLaSource";
 import LesEcrins from "./pages/séjourner/hebergements/refugesCabanesPages/LesEcrins";
 import RoulotteDeLaJaique from "./pages/séjourner/hebergements/refugesCabanesPages/RoulotteDeLaJaique";
+import StationDeFoncine from "./pages/activites/hiver/activitesHiverPages/StationDeFoncine";
+import PrePoncet from "./pages/activites/hiver/activitesHiverPages/PrePoncet";
+import EcoleDuSki from "./pages/activites/hiver/activitesHiverPages/EcoleDuSki";
+import StationDeMouthe from "./pages/activites/hiver/activitesHiverPages/StationDeMouthe";
+import StationDeChauxNeuve from "./pages/activites/hiver/activitesHiverPages/StationDeChauxNeuve";
+import CentreEquestre from "./pages/activites/été/avecLesAnimaux/CentreEquestre";
+import EquipagesAdam from "./pages/activites/été/avecLesAnimaux/EquipagesAdam";
+import ParcPolaire from "./pages/activites/été/avecLesAnimaux/ParcPolaire";
+import VerticaleDuTremplin from "./pages/activites/été/Trail/VerticaleDuTremplin";
+import ParcourPrePoncet from "./pages/activites/été/Trail/PrePoncet";
+import TremplinChatelblanc from "./pages/activites/été/Trail/TremplinChatelblanc";
+import BRC1 from "./pages/activites/été/VeloEtVTT/BRC1";
+import BRC2 from "./pages/activites/été/VeloEtVTT/BRC2";
+import BRC3 from "./pages/activites/été/VeloEtVTT/BRC3";
+import RandonneeMoutheChauxNeuve from "./pages/activites/été/Randonnee/RandonneeMoutheChauxNeuve";
+import RandonneeChauxNeuveChatelblanc from "./pages/activites/été/Randonnee/RandonneeChauxNeuveChatelblanc";
+import RandonneeChauxNeuve from "./pages/activites/été/Randonnee/RandonneeChauxNeuve";
 
 
 const App = () => {
@@ -126,10 +143,31 @@ const App = () => {
 
           {/*   Hiver */}
           <Route path="/hiver" element={<Hiver/>}/>
-
+          <Route path="/stationDeFoncine" element={<StationDeFoncine/>}/>
+          <Route path="/prePoncet" element={<PrePoncet/>}/>
+          <Route path="/ecoleDuSki" element={<EcoleDuSki/>}/>
+          <Route path="/stationDeMouthe" element={<StationDeMouthe/>}/>
+          <Route path="/stationDeChauxNeuve" element={<StationDeChauxNeuve/>}/>
           {/*   Ete  */}
           <Route path="/ete" element={<Ete/>} /> 
-
+          {/*  AvecLesAnimaux  */}
+          <Route path="/centreEquestre" element={<CentreEquestre/>} /> 
+          <Route path="/equipagesAdam" element={<EquipagesAdam/>} /> 
+          <Route path="/parcPolaire" element={<ParcPolaire/>} /> 
+          {/*  Trail  */}
+          <Route path="/verticaleDuTremplin" element={<VerticaleDuTremplin/>} /> 
+          <Route path="/parcourPrePoncet" element={<ParcourPrePoncet/>} /> 
+          <Route path="/tremplinChatelblanc" element={<TremplinChatelblanc/>} /> 
+          {/*  VTT  */}
+          <Route path="/bRC1" element={<BRC1/>} /> 
+          <Route path="/bRC2" element={<BRC2/>} /> 
+          <Route path="/bRC3" element={<BRC3/>} /> 
+          {/*  Randonnee */}
+          <Route path="/randonneeMoutheChauxNeuve" element={<RandonneeMoutheChauxNeuve/>} /> 
+          <Route path="/randonneeChauxNeuveChatelblanc" element={<RandonneeChauxNeuveChatelblanc/>} /> 
+          <Route path="/randonneeChauxNeuve" element={<RandonneeChauxNeuve />} /> 
+          
+          
           {/*   Patrimone  */}
           <Route path="/patrimone" element={<Patrimone />} />
           <Route path="/maisonDeLaReserve" element={<MaisonDeLaReserve />} />
