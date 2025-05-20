@@ -81,6 +81,10 @@ import RandonneeMoutheChauxNeuve from "./pages/activites/été/Randonnee/Randonn
 import RandonneeChauxNeuveChatelblanc from "./pages/activites/été/Randonnee/RandonneeChauxNeuveChatelblanc";
 import RandonneeChauxNeuve from "./pages/activites/été/Randonnee/RandonneeChauxNeuve";
 import CookieConsent from "./component/CookieConsent";
+import ChauxNevue from "./pages/DecouvrirLaStation/ChauxNevue";
+import Mouthe from "./pages/DecouvrirLaStation/Mouthe";
+import ChapelleDesBois from "./pages/DecouvrirLaStation/ChapelleDesBois";
+import FoncineLeHaut from "./pages/DecouvrirLaStation/FoncineLeHaut";
 
 
 const App = () => {
@@ -93,6 +97,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Decouvrir />} />
           <Route path="/decouvrir" element={<Decouvrir />} />
+          <Route path="/chauxNevue" element={<ChauxNevue />} />
+          <Route path="/mouthe" element={<Mouthe />} />
+          <Route path="/chapelleDesBois" element={<ChapelleDesBois />} />
+          <Route path="/foncineLeHaut" element={<FoncineLeHaut />} />
+          
           {/*   Hebergements  */}
           <Route path="/hebergements" element={<Hebergements />} />
 
@@ -196,7 +205,6 @@ const App = () => {
           {/* Footer */}
           <Route path="/faqs" element={<FAQ />} />
           <Route path="/mentions" element={<Mentions />} />
-          <Route path="/donnees" element={<Donnees />} />
           <Route path="/conditions" element={<Conditions/>} />
         
         </Routes>

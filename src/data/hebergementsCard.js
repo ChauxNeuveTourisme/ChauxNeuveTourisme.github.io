@@ -24,7 +24,7 @@ export const cardData = {
       {
         question: "Quels types d'hébergements propose Chaux-Neuve ?",
         answer:
-          "Chaux-Neuve propose une variété d'options d'hébergement exceptionnelle, allant des hôtels de 2 étoiles aux palaces, en passant par des chalets chaleureux et des appartements confortables, des résidences ou des gîtes. Chaque option offre une expérience unique correspondant à chaque besoin et chaque budget, et la majorité des hébergements bénéficient d'un accès direct aux pistes pour profiter pleinement du ski in/ski out."
+          "Que vous recherchiez un séjour en famille, une escapade romantique, une aventure en pleine nature ou une expérience culinaire, Chaux-Neuve dispose d'une offre d'hébergement variée pour répondre à vos attentes. N'hésitez pas à préciser vos préférences pour obtenir des recommandations plus ciblées."
       },
       {
         question: "Est-ce que les hébergements sont proches des pistes de ski à Chaux-Neuve ?",

@@ -3,102 +3,71 @@
   "description": "Chaux neuve offre une multitude d’activités pour tous les goûts et toutes les saisons. Que vous soyez sportif, amoureux de la nature ou passionné de patrimoine historique et culturel, vous trouverez de quoi satisfaire vos envies",
   "buttons": [
     { "text": "Que faire ?", "href": "#" },
-    { "text": "Découvrir la Station", "href": "#" },
-    { "text": "Liens utiles", "href": "#" }
+    { "text": "Découvrir la Station", "href": "#" }
+    
   ],
   "cards": [
     {
-      "href": "#",
-      "imgSrc": "/images/ims.jpeg",
+      "href": "/bRC1",
+      "imgSrc": "/images/EnEte/VeloEtVTT/BRC1/0.webp",
       "imgAlt": "imgAlt",
-      "title": "title",
-      "description": "description",
+      "title": "Boucle Roche Champion – Vue sur les lacs au départ de Chaux-Neuve",
+      "description": "",
       "category": "Que faire ?"
     },
     {
-      "href": "#",
-      "imgSrc": "/images/ims.jpeg",
+      "href": "/restaurantLaTableDuCébriot",
+      "imgSrc": "/images/restauration/TableDuCébriot/caption-1.jpg",
       "imgAlt": "imgAlt",
-      "title": "title",
-      "description": "description",
+      "title": "Restaurant La Table Du Cébriot",
+      "description": "",
       "category": "Que faire ?"
     },
     {
-      "href": "#",
-      "imgSrc": "/images/ims.jpeg",
+      "href": "/refugesCabanes",
+      "imgSrc": "/images/hebergements/RefugesCabanes/LesEcrinsDuVal/5003a10ee8587ac80da442e7973c60b5-terrasse-bois-du-four--1600x0.jpg",
       "imgAlt": "imgAlt",
-      "title": "title",
-      "description": "description",
+      "title": "Refuges et Cabanes",
+      "description": "",
       "category": "Que faire ?"
     },
-    {"href": "#",
-      "imgSrc": "/images/ims.jpeg",
+    {"href": "/epicerieChezChantal",
+      "imgSrc": "/images/commerces/Chantal/600_sc_20240618-151704.webp",
       "imgAlt": "imgAlt",
-      "title": "title",
-      "description": "description",
+      "title": "Épicerie Chez Chantal",
+      "description": "",
       "category": "Que faire ?"
     },
     {
-      "href": "#",
-      "imgSrc": "/images/ims.jpeg",
+      "href": "/chauxNevue",
+      "imgSrc": "/images/chaux-neuve/182019b34e9.webp",
       "imgAlt": "imgAlt",
-      "title": "title Découvrir la Station",
-      "description": "description",
+      "title": "Chaux-Neuve",
+      "description": "",
       "category": "Découvrir la Station"
     },
     {
-      "href": "#",
-      "imgSrc": "/images/ims.jpeg",
+      "href": "/foncineLeHaut",
+      "imgSrc": "/images/foncineLeHaut/111.webp",
       "imgAlt": "imgAlt",
-      "title": "title Découvrir la Station",
-      "description": "description",
+      "title": "Foncine-le-Haut",
+      "description": "",
       "category": "Découvrir la Station"
     },
     {
-      "href": "#",
-      "imgSrc": "/images/ims.jpeg",
+      "href": "/chapelleDesBois",
+      "imgSrc": "/images/chapelleDesBois/111.webp",
       "imgAlt": "imgAlt",
-      "title": "title Découvrir la Station",
-      "description": "description",
+      "title": "Chapelle-des-Bois",
+      "description": "",
       "category": "Découvrir la Station"
     },
-    {"href": "#",
-      "imgSrc": "/images/ims.jpeg",
+    {"href": "/mouthe",
+      "imgSrc": "/images/mouthe/11.webp",
       "imgAlt": "imgAlt",
-      "title": "title Découvrir la Station",
-      "description": "description",
+      "title": "Mouthe",
+      "description": "",
       "category": "Découvrir la Station"
-    },
-    {
-      "href": "#",
-      "imgSrc": "/images/ims.jpeg",
-      "imgAlt": "imgAlt",
-      "title": "title Liens utiles",
-      "description": "description",
-      "category": "Liens utiles"
-    },
-    {
-      "href": "#",
-      "imgSrc": "/images/ims.jpeg",
-      "imgAlt": "imgAlt",
-      "title": "title Liens utiles",
-      "description": "description",
-      "category": "Liens utiles"
-    },
-    {
-      "href": "#",
-      "imgSrc": "/images/ims.jpeg",
-      "imgAlt": "imgAlt ",
-      "title": "title Liens utiles",
-      "description": "description",
-      "category": "Liens utiles"
-    },
-    {"href": "#",
-      "imgSrc": "/images/ims.jpeg",
-      "imgAlt": "imgAlt",
-      "title": "title Liens utiles",
-      "description": "description",
-      "category": "Liens utiles"
     }
   ]
 }

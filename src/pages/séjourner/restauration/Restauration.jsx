@@ -17,7 +17,8 @@ function Restauration() {
             />
             <HebergementsSection
                 title="De la traditionnelle fondue aux mets des cuisines internationales, profitez des meilleures tables à Chaux-Neuve."
-                paragraph="À Chaux-Neuve, les vacances se passent au rythme de l’art de vivre à la française. Le savoir-faire gastronomique de la station de ski savoyarde est intimement ancré dans les traditions montagnardes. Qu’il s’agisse de tables étoilées, de cuisine traditionnelle française ou de restaurants proposant des cartes dans la plus pure tradition alpine, découvrez une infinité de saveurs autour de plats réalisés avec des produits frais et locaux..."
+                paragraph="La gastronomie de Chaux-Neuve, nichée au cœur du Haut-Doubs, reflète l'authenticité et la richesse du terroir comtois. Les restaurants locaux mettent en avant une cuisine généreuse, préparée à partir de produits frais
+                    et locaux, souvent issus de circuits courts."
             />
             <WhereToGo />
             <CardGrid 

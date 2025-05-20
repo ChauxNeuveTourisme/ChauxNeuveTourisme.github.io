@@ -56,7 +56,7 @@ export const PatrimoineData = {
         {
             title: "l'Ecomusée Maison Michaud",
             description: "",
-            imageUrl: "/images/patrimone/EcomuseeMaison/600_sc_20240618-140615.webp",
+            imageUrl: "/images/chaux-neuve/800x600_ecomusee-maison-michaud-chapelle-des-bois-visite-guidee-facade-entree-1056.jpg",
             link: "/ecomuseeMaison"
         },
         {

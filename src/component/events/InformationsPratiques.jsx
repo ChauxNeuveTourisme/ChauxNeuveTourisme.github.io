@@ -24,7 +24,7 @@ const InformationsSection = ({ sectionTitle, data }) => {
 
       <div className="grid lg:grid-cols-2 gap-8">
         {data.map((item, index) => (
-          <div key={index} className="border-b">
+          <div key={index} className="">
             <button
               onClick={() => toggle(index)}
               className="w-full flex justify-between items-center py-6 px-4 text-left text-lg font-medium text-basis-95 text-white"
@@ -34,7 +34,7 @@ const InformationsSection = ({ sectionTitle, data }) => {
                 {item.title}
               </span>
               <ChevronDown
-                className={`transition-transform duration-300 ${
+                className={`transition-transform duration-50 ${
                   openIndex === index ? "rotate-180" : ""
                 }`}
               />

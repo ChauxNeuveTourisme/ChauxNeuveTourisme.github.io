@@ -155,3 +155,113 @@ export const AtelierDeDonat= [
     alt: 'Image 5',
 },
 ];
+
+
+export const chauxNevue= [
+  {
+    full: '/images/chaux-neuve/100.webp',
+    thumb: '/images/chaux-neuve/100.webp',
+    alt: 'Image 1',
+  },
+  {
+    full: '/images/chaux-neuve/101.webp',
+    thumb: '/images/chaux-neuve/101.webp',
+    alt: 'Image 2',
+  },
+  {
+    full: '/images/chaux-neuve/102.webp',
+    thumb: '/images/chaux-neuve/102.webp',
+    alt: 'Image 3',
+  },
+  {
+    full: '/images/chaux-neuve/103.jpeg',
+    thumb: '/images/chaux-neuve/103.jpeg',
+      alt: 'Image 4',
+  },
+  {
+    full: '/images/chaux-neuve/104.jpg',
+    thumb: '/images/chaux-neuve/104.jpg',
+    alt: 'Image 5',
+},
+];
+export const mouthe= [
+  {
+    full: '/images/mouthe/0.webp',
+    thumb: '/images/mouthe/0.webp',
+    alt: 'Image 1',
+  },
+  {
+    full: '/images/mouthe/1.webp',
+    thumb: '/images/mouthe/1.webp',
+    alt: 'Image 2',
+  },
+  {
+    full: '/images/mouthe/2.webp',
+    thumb: '/images/mouthe/2.webp',
+    alt: 'Image 3',
+  },
+  {
+    full: '/images/mouthe/3.webp',
+    thumb: '/images/mouthe/3.webp',
+      alt: 'Image 4',
+  },
+  {
+    full: '/images/mouthe/4.webp',
+    thumb: '/images/mouthe/4.webp',
+    alt: 'Image 5',
+},
+];
+export const chapelleDesBois= [
+  {
+    full: '/images/chapelleDesBois/1.jpg',
+    thumb: '/images/chapelleDesBois/1.jpg',
+    alt: 'Image 1',
+  },
+  {
+    full: '/images/chapelleDesBois/2.jpg',
+    thumb: '/images/chapelleDesBois/2.jpg',
+    alt: 'Image 2',
+  },
+  {
+    full: '/images/chapelleDesBois/3.jpg',
+    thumb: '/images/chapelleDesBois/3.jpg',
+    alt: 'Image 3',
+  },
+  {
+    full: '/images/chapelleDesBois/4.jpg',
+    thumb: '/images/chapelleDesBois/4.jpg',
+      alt: 'Image 4',
+  },
+  {
+    full: '/images/chapelleDesBois/5.jpg',
+    thumb: '/images/chapelleDesBois/5.jpg',
+    alt: 'Image 5',
+},
+];
+export const foncineLeHaut= [
+  {
+    full: '/images/foncineLeHaut/1.jpg',
+    thumb: '/images/foncineLeHaut/1.jpg',
+    alt: 'Image 1',
+  },
+  {
+    full: '/images/foncineLeHaut/2.webp',
+    thumb: 'images/foncineLeHaut/2.webp',
+    alt: 'Image 2',
+  },
+  {
+    full: '/images/foncineLeHaut/3.webp',
+    thumb: 'images/foncineLeHaut/3.webp',
+    alt: 'Image 3',
+  },
+  {
+    full: '/images/foncineLeHaut/4.webp',
+    thumb: 'images/foncineLeHaut/4.webp',
+      alt: 'Image 4',
+  },
+  {
+    full: '/images/foncineLeHaut/5.webp',
+    thumb: 'images/foncineLeHaut/5.webp',
+    alt: 'Image 5',
+},
+];
